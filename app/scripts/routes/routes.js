@@ -1,10 +1,10 @@
 'use strict';
 
-angular.module('aoclabsApp')
+angular.module('myApp')
 
 .config(function($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/');
 
     $stateProvider
 
@@ -29,18 +29,36 @@ angular.module('aoclabsApp')
         template: 'I could sure use a drink right now.'
     })
 
-    // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
-    .state('about', {
-        url: '/about',
+    // BIO STATES AND NESTED VIEWS ========================================
+    .state('bio', {
+        url: '/',
+        templateUrl: 'partials/bio.html'
+    })
+
+    // GOALS STATES AND NESTED VIEWS ========================================
+    .state('goals', {
+        url: '/goals',
+        templateUrl: 'partials/goals.html'
+    })
+
+    // PROJECTS STATES AND NESTED VIEWS ========================================
+    .state('projects', {
+        url: '/projects',
+        templateUrl: 'partials/projects.html'
+    })
+
+    // IDEAS PAGE AND MULTIPLE NAMED VIEWS =================================
+    .state('ideas', {
+        url: '/ideas',
         views: {
             '': {
-                templateUrl: 'partials/about.html'
+                templateUrl: 'partials/ideas.html'
             },
-            'columnOne@about': {
+            'columnOne@ideas': {
                 template: 'Look I am a column!'
             },
-            'columnTwo@about': {
-                templateUrl: 'partials/about-table.html',
+            'columnTwo@ideas': {
+                templateUrl: 'partials/ideas-table.html',
                 controller: 'scotchController'
             }
         }

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('aoclabsApp', [
+angular.module('myApp', [
     'ui.router',
     'ngResource'
 ]);
