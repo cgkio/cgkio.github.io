@@ -5,10 +5,19 @@
     "angular": "1.2.6",
     "json3": "~3.2.6",
     "es5-shim": "~2.1.0",
-    "jquery": "~2.1.0",
+    "jquery": "1.11.0",
     "bootstrap": "~3.1.1",
     "angular-resource": "~1.2.15",
-    "angular-ui-router": "~0.2.10"
+    "angular-ui-router": "~0.2.10",
+    "isotope": "2.0.0-beta.10",
+    "jquery.easy-pie-chart": "~2.1.4",
+    "magnific-popup": "~0.9.9",
+    "jquery.scrollTo": "~1.4.11",
+    "gmap3": "~5.1.1",
+    "jquery.nicescroll": "*",
+    "jquery.cycle": "*",
+    "jquery-cycle2": "~2.1.0",
+    "jquery-mousewheel": "~3.1.9"
   },
   "devDependencies": {
     "angular-mocks": "1.2.6",
