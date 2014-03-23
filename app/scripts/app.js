@@ -1,3 +1,6 @@
 'use strict';
 
-angular.module('cgkiogithubioApp', []);
+angular.module('aoclabsApp', [
+    'ui.router',
+    'ngResource'
+]);
