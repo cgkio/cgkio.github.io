@@ -47,6 +47,20 @@ angular.module('myApp')
         templateUrl: 'partials/projects.html'
     })
 
+    // TASKS STATES AND NESTED VIEWS ========================================
+    .state('tasks', {
+        url: '/tasks',
+        templateUrl: 'partials/tasks.html',
+        controller: 'TasksCtrl'
+    })
+
+    // ISSUES STATES AND NESTED VIEWS ========================================
+    .state('issues', {
+        url: '/issues',
+        templateUrl: 'partials/issues.html',
+        controller: 'GithubCtrl'
+    })
+
     // IDEAS PAGE AND MULTIPLE NAMED VIEWS =================================
     .state('ideas', {
         url: '/ideas',
