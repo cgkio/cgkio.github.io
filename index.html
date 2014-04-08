@@ -7,11 +7,23 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="styles/vendor.css"/>
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
 
-    <link rel="stylesheet" href="styles/main.css"/>
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/bio.css">
+    <link rel="stylesheet" href="styles/goals.css">
+    <link rel="stylesheet" href="styles/projects.css">
+    <link rel="stylesheet" href="styles/tasks.css">
+    <!-- endbuild -->
 
-    <script src="scripts/vendor/modernizr.js"></script>
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
 </head>
 
 <body ng-app="myApp">
@@ -43,11 +55,35 @@
     ga('send', 'pageview');
     </script>
 
-    <script src="scripts/vendor.js"></script>
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/firebase-simple-login/firebase-simple-login.js"></script>
+    <script src="bower_components/angularfire/angularfire.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
 
-    <script src="scripts/plugins.js"></script>
+    <!-- build:js scripts/plugins.js -->
+    <script src="scripts/vendors/parse.min.js"></script>
+    <!-- endbuild -->
 
-    <script src="scripts/main.js"></script>
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/routes/routes.js"></script>
+    <script src="scripts/controllers/goals.js"></script>
+    <script src="scripts/controllers/scotch.js"></script>
+    <script src="scripts/controllers/tasks.js"></script>
+    <script src="scripts/controllers/github.js"></script>
+    <script src="scripts/services/services.js"></script>
+    <script src="scripts/services/firebase.js"></script>
+    <script src="scripts/services/github.js"></script>
+    <script src="scripts/ui/goals.jquery.js"></script>
+    <!-- endbuild -->
 </body>
 
 </html>
