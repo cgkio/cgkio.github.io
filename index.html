@@ -1,12 +1,45 @@
-<!doctype html><!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--><!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]--><!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]--><!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]--><head><meta charset="utf-8"><title></title><meta name="description" content=""><meta name="viewport" content="width=device-width"><!-- Place favicon.ico and apple-touch-icon.png in the root directory --><link rel="stylesheet" href="styles/cd367326.vendor.css"><link rel="stylesheet" href="styles/5a3706b1.main.css"><body ng-app="bscssApp"><!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]--><!-- Add your site or application content here --><div class="container" ng-view=""></div><!-- Google Analytics: change UA-XXXXX-X to be your site's ID --><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<!DOCTYPE html>
+<html>
 
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');</script><!--[if lt IE 9]>
-    <script src="bower_components/es5-shim/es5-shim.js"></script>
-    <script src="bower_components/json3/lib/json3.min.js"></script>
-    <![endif]--><script src="scripts/2dea9f3f.vendor.js"></script><script src="scripts/e900b48c.scripts.js"></script>
+<head>
+  <meta charset="utf8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="apple-touch-icon" href="AppIcon57x57.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/AppIcon76x76.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/AppIcon60x60@2x.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/AppIcon72x72@2x.png">
+  <title>Laura</title>
+
+  <link rel="stylesheet" href="/bower_components/ionic/release/css/ionic.min.css" />
+
+  <script src="/javascript/onerror.js"></script>
+  <script src="/javascript/console.log.js"></script>
+
+  <!-- ionic/angularjs js -->
+  <script src="/bower_components/ionic/release/js/ionic.bundle.min.js"></script>
+
+  <!-- Firebase -->
+  <script src="/bower_components/firebase/firebase.js"></script>
+  <script src="/bower_components/angularfire/angularfire.min.js"></script>
+
+  <!-- custom app code -->
+  <script src="/javascript/app.js"></script>
+  <script src="/javascript/controllers.js"></script>
+
+</head>
+
+<body ng-app="starter" animation="slide-left-right-ios7">
+
+  <ion-nav-bar class="bar-positive nav-title-slide-ios7">
+    <ion-nav-back-button class="button-icon">
+      <i class="icon ion-arrow-left-c"></i>
+    </ion-nav-back-button>
+  </ion-nav-bar>
+
+  <ion-nav-view></ion-nav-view>
+
+</body>
+
+</html>
