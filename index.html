@@ -1,44 +1,130 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" ng-app="myApp">
+<!--<![endif]-->
 
 <head>
-  <meta charset="utf8">
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <link rel="apple-touch-icon" href="AppIcon57x57.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="images/AppIcon76x76.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="images/AppIcon60x60@2x.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="images/AppIcon72x72@2x.png">
-  <title>Laura</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title></title>
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="stylesheet" href="styles/6bad6e7f.main.css">
+  <script src="scripts/vendor/d7100892.modernizr.js"></script>
 
-  <link rel="stylesheet" href="/bower_components/ionic/release/css/ionic.min.css" />
-
-  <script src="/javascript/onerror.js"></script>
-  <script src="/javascript/console.log.js"></script>
-
-  <!-- ionic/angularjs js -->
-  <script src="/bower_components/ionic/release/js/ionic.bundle.min.js"></script>
-
-  <!-- Firebase -->
-  <script src="/bower_components/firebase/firebase.js"></script>
-  <script src="/bower_components/angularfire/angularfire.min.js"></script>
-
-  <!-- custom app code -->
-  <script src="/javascript/app.js"></script>
-  <script src="/javascript/controllers.js"></script>
-
+  <link rel="stylesheet" href="styles/vendor/e40cadc5.bootstrap.css">
 </head>
 
-<body ng-app="starter" animation="slide-left-right-ios7">
+<body ng-cloak="">
 
-  <ion-nav-bar class="bar-positive nav-title-slide-ios7">
-    <ion-nav-back-button class="button-icon">
-      <i class="icon ion-arrow-left-c"></i>
-    </ion-nav-back-button>
-  </ion-nav-bar>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <a class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="navbar-brand" href="#">CGKIO</a>
+      <div class="nav-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#/home">Home</a>
+          </li>
+          <li><a href="#/chat">Chat</a>
+          </li>
+          <li ng-show-auth="['logout','error']"><a href="#/login">Login</a>
+          </li>
+          <li ng-show-auth="'login'"><a href="#/account">Account</a>
+          </li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </div>
 
-  <ion-nav-view></ion-nav-view>
+  <div class="container">
+
+    <div class="jumbotron">
+      <h1 class="">Hello World</h1>
+      <p><span id="status"></span>
+      </p>
+    </div>
+
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col col-lg-4">
+        <h2>Heading</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+        <p><a class="btn btn-default" href="#">View details &raquo;</a>
+        </p>
+      </div>
+      <div class="col col-lg-4">
+        <h2>Heading</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+        <p><a class="btn btn-default" href="#">View details &raquo;</a>
+        </p>
+      </div>
+      <div class="col col-lg-4">
+        <h2>Heading</h2>
+        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p><a class="btn btn-default" href="#">View details &raquo;</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div ng-view=""></div>
+    </div>
+
+    <div>AngularFire-seed v<span app-version=""></span>
+    </div>
+
+  </div>
+  <!-- /container -->
+
+  <!--[if lt IE 7]>
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+  <![endif]-->
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  <script>
+    // var _gaq = [
+     //   ['_setAccount', 'UA-XXXXX-X'],
+     //   ['_trackPageview']
+     // ];
+     // (function(d, t) {
+     //   var g = d.createElement(t),
+     //     s = d.getElementsByTagName(t)[0];
+     //   g.src = '//www.google-analytics.com/ga.js';
+     //   s.parentNode.insertBefore(g, s)
+     // }(document, 'script'));
+  </script>
+
+  <script src="https://cdn.firebase.com/v0/firebase.js"></script>
+  <script src="https://cdn.firebase.com/v0/firebase-simple-login.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/0.6.0/angularfire.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+  <script src="scripts/app.js"></script>
+  <script src="scripts/config.js"></script>
+  <script src="scripts/controllers.js"></script>
+  <script src="scripts/directives.js"></script>
+  <script src="scripts/filters.js"></script>
+  <script src="scripts/routes.js"></script>
+  <script src="scripts/services.js"></script>
+  <script src="scripts/service.login.js"></script>
+  <script src="scripts/service.firebase.js"></script>
+  <script src="scripts/service.changeEmail.js"></script>
+  <script src="scripts/module.simpleLoginTools.js"></script>
+  <script src="scripts/module.routeSecurity.js"></script>
+
+  <script src="scripts/6a284043.main.js"></script>
+
+  <script src="scripts/0c5b2ddc.fastclick.js"></script>
 
 </body>
 
