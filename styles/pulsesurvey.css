@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.wrap.highlight.iphone {
+    background: #005172;
+}
+
+.dome {
+	/*position: absolute;*/
+    bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-default {
+    color: #fff;
+    background-color: #005172;
+    border-color: #e8e8eb;
+}
+
+.h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: -0.1ex;
+}
+
+.btn-primary {
+    color: #ffffff;
+    background-color: #005172;
+    border-color: #005172;
+}
