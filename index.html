@@ -60,8 +60,8 @@
     <aside class="sidebar-wrap-left">
       <div class="sidebar">
         <img src="img/profile-pic.jpg" alt="Christian Kessler" />
-        <h1 class="light-text animated">Christian Kessler</h1>
-        <h3 class="light-text animated">Product Development &amp; Incubation</h3>
+        <!-- <h1 class="light-text animated">Christian Kessler</h1>
+        <h3 class="light-text animated">Product Development &amp; Incubation</h3> -->
         <div class="contact-details-wrap animated">
           <div class="contact-details">
             <h2 class="light-text">Contact Details</h2>
@@ -167,23 +167,20 @@
         <div class="skillset">
           <div class="skill">
             <div class="row">
-              <div class="col-lg-7 col-lg-offset-5 col-md-7 col-md-offset-5 col-sm-7 col-sm-offset-5  group">
+              <div class="col-lg-7 col-lg-offset-5 col-md-7 col-md-offset-8 col-sm-7 col-sm-offset-5  group">
                 <div class="column heading">Years of experience</div>
                 <div class="column heading">Completed projects</div>
-                <div class="column heading">Satisfied customers</div>
               </div>
             </div>
           </div>
           <div class="skill blue">
             <div class="row">
-              <span class="indicator blue" data-percentage="50"></span>
-              <div class="col-lg-5 col-md-4 col-sm-4 title">Photoshop</div>
-              <div class="col-lg-7 col-md-8 col-sm-8">
-                <div class="column group">7<i class="skill-icon experience"></i>
+              <span class="indicator blue" data-percentage="30"></span>
+              <div class="col-lg-5 col-md-8 col-sm-4 title">{{resume.skillone}}</div>
+              <div class="col-lg-7 col-md-4 col-sm-8">
+                <div class="column group">{{resume.skillone_yrsexperience}}<i class="skill-icon experience"></i>
                 </div>
-                <div class="column group">218<i class="skill-icon projects"></i>
-                </div>
-                <div class="column group">1532<i class="skill-icon customers"></i>
+                <div class="column group">{{resume.skillone_projects}}<i class="skill-icon projects"></i>
                 </div>
               </div>
             </div>
@@ -191,13 +188,11 @@
           <div class="skill orange">
             <div class="row">
               <span class="indicator orange" data-percentage="40"></span>
-              <div class="col-lg-5 col-md-4 col-sm-4 title">Illustrator</div>
+              <div class="col-lg-5 col-md-4 col-sm-4 title">{{resume.skilltwo}}</div>
               <div class="col-lg-7 col-md-8 col-sm-8">
-                <div class="column group">7<i class="skill-icon experience"></i>
+                <div class="column group">{{resume.skilltwo_yrsexperience}}<i class="skill-icon experience"></i>
                 </div>
-                <div class="column group">218<i class="skill-icon projects"></i>
-                </div>
-                <div class="column group">1532<i class="skill-icon customers"></i>
+                <div class="column group">{{resume.skilltwo_projects}}<i class="skill-icon projects"></i>
                 </div>
               </div>
             </div>
@@ -205,13 +200,11 @@
           <div class="skill grey">
             <div class="row">
               <span class="indicator grey" data-percentage="46"></span>
-              <div class="col-lg-5 col-md-4 col-sm-4 title">Lightroom</div>
+              <div class="col-lg-5 col-md-4 col-sm-4 title">{{resume.skillthree}}</div>
               <div class="col-lg-7 col-md-8 col-sm-8">
-                <div class="column group">7<i class="skill-icon experience"></i>
+                <div class="column group">{{resume.skillthree_yrsexperience}}<i class="skill-icon experience"></i>
                 </div>
-                <div class="column group">218<i class="skill-icon projects"></i>
-                </div>
-                <div class="column group">1532<i class="skill-icon customers"></i>
+                <div class="column group">{{resume.skillthree_projects}}<i class="skill-icon projects"></i>
                 </div>
               </div>
             </div>
@@ -219,13 +212,11 @@
           <div class="skill green">
             <div class="row">
               <span class="indicator green" data-percentage="68"></span>
-              <div class="col-lg-5 col-md-4 col-sm-4 title">CorelDraw</div>
+              <div class="col-lg-5 col-md-4 col-sm-4 title">{{resume.skillfour}}</div>
               <div class="col-lg-7 col-md-8 col-sm-8">
-                <div class="column group">7<i class="skill-icon experience"></i>
+                <div class="column group">{{resume.skillfour_yrsexperience}}<i class="skill-icon experience"></i>
                 </div>
-                <div class="column group">218<i class="skill-icon projects"></i>
-                </div>
-                <div class="column group">1532<i class="skill-icon customers"></i>
+                <div class="column group">{{resume.skillfour_projects}}<i class="skill-icon projects"></i>
                 </div>
               </div>
             </div>
@@ -233,13 +224,11 @@
           <div class="skill violet">
             <div class="row">
               <span class="indicator violet" data-percentage="53"></span>
-              <div class="col-lg-5 col-md-4 col-sm-4 title">Visual Studio</div>
+              <div class="col-lg-5 col-md-4 col-sm-4 title">{{resume.skillfive}}</div>
               <div class="col-lg-7 col-md-8 col-sm-8">
-                <div class="column group">7<i class="skill-icon experience"></i>
+                <div class="column group">{{resume.skillfive_yrsexperience}}<i class="skill-icon experience"></i>
                 </div>
-                <div class="column group">218<i class="skill-icon projects"></i>
-                </div>
-                <div class="column group">1532<i class="skill-icon customers"></i>
+                <div class="column group">{{resume.skillfive_projects}}<i class="skill-icon projects"></i>
                 </div>
               </div>
             </div>
@@ -247,13 +236,89 @@
           <div class="skill black">
             <div class="row">
               <span class="indicator black" data-percentage="30"></span>
-              <div class="col-lg-5 col-md-4 col-sm-4 title">Processing</div>
+              <div class="col-lg-5 col-md-4 col-sm-4 title">{{resume.skillsix}}</div>
               <div class="col-lg-7 col-md-8 col-sm-8">
-                <div class="column group">7<i class="skill-icon experience"></i>
+                <div class="column group">{{resume.skillsix_yrsexperience}}<i class="skill-icon experience"></i>
                 </div>
-                <div class="column group">218<i class="skill-icon projects"></i>
+                <div class="column group">{{resume.skillsix_projects}}<i class="skill-icon projects"></i>
                 </div>
-                <div class="column group">1532<i class="skill-icon customers"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Skills-->
+      <section class="full-width skills" id="skills">
+        <a class="navi-link center scroll" href="#skills" id="5"><i class="icon-tools"></i></a>
+        <div class="color-heading">
+          <h2>Skills (trending)</h2>
+        </div>
+        <div class="skillset">
+          <div class="skill">
+            <div class="row">
+              <div class="col-lg-7 col-lg-offset-5 col-md-7 col-md-offset-8 col-sm-7 col-sm-offset-5  group">
+                <div class="column heading">Years of experience</div>
+                <div class="column heading">Completed projects</div>
+              </div>
+            </div>
+          </div>
+          <div class="skill blue">
+            <div class="row">
+              <span class="indicator blue" data-percentage="30"></span>
+              <div class="col-lg-5 col-md-8 col-sm-4 title">{{resume.trending_skillone}}</div>
+              <div class="col-lg-7 col-md-4 col-sm-8">
+                <div class="column group">{{resume.trending_skillone_yrsexperience}}<i class="skill-icon experience"></i>
+                </div>
+                <div class="column group">{{resume.trending_skillone_projects}}<i class="skill-icon projects"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skill orange">
+            <div class="row">
+              <span class="indicator orange" data-percentage="40"></span>
+              <div class="col-lg-5 col-md-4 col-sm-4 title">{{resume.trending_skilltwo}}</div>
+              <div class="col-lg-7 col-md-8 col-sm-8">
+                <div class="column group">{{resume.trending_skilltwo_yrsexperience}}<i class="skill-icon experience"></i>
+                </div>
+                <div class="column group">{{resume.trending_skilltwo_projects}}<i class="skill-icon projects"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skill grey">
+            <div class="row">
+              <span class="indicator grey" data-percentage="46"></span>
+              <div class="col-lg-5 col-md-4 col-sm-4 title">{{resume.trending_skillthree}}</div>
+              <div class="col-lg-7 col-md-8 col-sm-8">
+                <div class="column group">{{resume.trending_skillthree_yrsexperience}}<i class="skill-icon experience"></i>
+                </div>
+                <div class="column group">{{resume.trending_skillthree_projects}}<i class="skill-icon projects"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skill green">
+            <div class="row">
+              <span class="indicator green" data-percentage="68"></span>
+              <div class="col-lg-5 col-md-4 col-sm-4 title">{{resume.trending_skillfour}}</div>
+              <div class="col-lg-7 col-md-8 col-sm-8">
+                <div class="column group">{{resume.trending_skillfour_yrsexperience}}<i class="skill-icon experience"></i>
+                </div>
+                <div class="column group">{{resume.trending_skillfour_projects}}<i class="skill-icon projects"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skill violet">
+            <div class="row">
+              <span class="indicator violet" data-percentage="53"></span>
+              <div class="col-lg-5 col-md-4 col-sm-4 title">{{resume.trending_skillfive}}</div>
+              <div class="col-lg-7 col-md-8 col-sm-8">
+                <div class="column group">{{resume.trending_skillfive_yrsexperience}}<i class="skill-icon experience"></i>
+                </div>
+                <div class="column group">{{resume.trending_skillfive_projects}}<i class="skill-icon projects"></i>
                 </div>
               </div>
             </div>
@@ -263,7 +328,7 @@
 
       <!--Experience-->
       <section class="experience-block" id="experience">
-        <a class="navi-link scroll-top-40" href="#experience" id="5"><i class="icon-computer"></i></a>
+        <a class="navi-link scroll-top-40" href="#experience" id="6"><i class="icon-computer"></i></a>
         <div class="row">
           <div class="col-lg-12">
             <h2>Experience</h2>
@@ -315,7 +380,7 @@
 
       <!--Education-->
       <section class="education full-width color-bg" id="education">
-        <a class="navi-link center scroll" href="#education" id="6"><i class="icon-book"></i></a>
+        <a class="navi-link center scroll" href="#education" id="7"><i class="icon-book"></i></a>
         <div class="color-heading">
           <h2>Education</h2>
         </div>
@@ -504,7 +569,7 @@
 
       <!--Interests-->
       <section class="awards color-bg full-width" id="awards">
-        <a class="navi-link center scroll" href="#awards" id="7"><i class="icon-papirus"></i></a>
+        <a class="navi-link center scroll" href="#awards" id="8"><i class="icon-papirus"></i></a>
         <div class="color-heading">
           <h2>Interests</h2>
         </div>
@@ -513,13 +578,13 @@
             <div class="col-lg-6">
               <div style="background:url(img/awards/1.jpg) no-repeat;" class="award-1">
                 <a class="text" href="#">
-                  <h3 class="light-text">Interest No. 1</h3>
+                  <h3 class="light-text">3D Printing</h3>
                   <p class="light-text middle">{{resume.interestone}}</p>
                 </a>
               </div>
               <div style="background:url(img/awards/2.jpg) no-repeat;" class="award-2">
                 <a class="text" href="#">
-                  <h3 class="light-text">Interest No. 2</h3>
+                  <h3 class="light-text">DIY (Hobby) Electronics</h3>
                   <p class="light-text middle">{{resume.interesttwo}}</p>
                 </a>
               </div>
@@ -573,20 +638,20 @@
 
       <!--Hobby-->
       <section class="hobby color-bg full-width" id="hobby">
-        <a class="navi-link center scroll" href="#hobby" id="8"><i class="icon-keds"></i></a>
+        <a class="navi-link center scroll" href="#hobby" id="9"><i class="icon-keds"></i></a>
         <div class="color-heading">
           <h2>Hobby</h2>
         </div>
         <div class="inner">
           <div class="row">
             <div class="col-lg-12">
-              <h3>Hobby No. 1</h3>
+              <h3>Gadget Economics</h3>
               <p>{{resume.hobbyone}}</p>
             </div>
           </div>
           <div class="row">
             <div class="col-lg-12">
-              <h3>Hobby No. 1</h3>
+              <h3>Airports</h3>
               <p>{{resume.hobbytwo}}</p>
             </div>
           </div>
@@ -620,7 +685,7 @@
 
       <!--Social Networks-->
       <section class="full-width" id="social">
-        <a class="navi-link center scroll" href="#social" id="9"><i class="icon-glass"></i></a>
+        <a class="navi-link center scroll" href="#social" id="10"><i class="icon-glass"></i></a>
         <div class="color-heading">
           <h2>Social</h2>
         </div>
