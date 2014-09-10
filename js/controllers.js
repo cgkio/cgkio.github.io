@@ -1,15 +1,15 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {
-})
+.controller('AppCtrl', function($scope) {})
 
-.controller('FriendsCtrl', function($scope, Friends) {
-  $scope.friends = Friends.all();
-})
+.controller("ResumeCtrl", function($scope, $firebase) {
+  var ref = new Firebase("https://cgk-io.firebaseio.com/resume");
+  var sync = $firebase(ref);
 
-.controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {
-  $scope.friend = Friends.get($stateParams.friendId);
-})
+  // download the data into a local object
+  var syncObject = sync.$asObject();
 
-.controller('AccountCtrl', function($scope) {
+  // synchronize the object with a three-way data binding
+  syncObject.$bindTo($scope, "resume");
+
 });
