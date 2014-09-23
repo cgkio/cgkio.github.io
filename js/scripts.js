@@ -24,27 +24,27 @@ $(window).resize(function() {
 });
 
 /*Checking if it's touch device we disable some functionality due to inconsistency*/
-if (Modernizr.touch) { 
+if (Modernizr.touch) {
 	$('*').removeClass('animated');
 }
 
 /*Document Ready*/
 $(document).ready(function(e) {
-	
+
 	//INTERNAL ANCHOR LINKS SCROLLING (NAVIGATION)
 	$('.scroll-up').click(function(){
     $("html, body").animate({ scrollTop: 0 }, 1000, 'easeInOutQuart');
     return false;
 	});
-	$(".scroll-top-40").click(function(event){		
+	$(".scroll-top-40").click(function(event){
 		event.preventDefault();
 		$('html, body').animate({scrollTop:$(this.hash).offset().top - 40}, 1000, 'easeInOutQuart');
 	});
-	$(".scroll").click(function(event){		
+	$(".scroll").click(function(event){
 		event.preventDefault();
 		$('html, body').animate({scrollTop:$(this.hash).offset().top}, 1000, 'easeInOutQuart');
 	});
-	
+
 	/*Stucking Navigation Links*/
 	$(window).load(function(){
 		var navLinks = { 1: 48, 2: 88, 3: 128, 4: 168, 5: 208, 6: 248, 7: 288, 8: 328, 9: 368, 10: 408, 11: 448, 12: 488, 13: 528};
@@ -54,7 +54,14 @@ $(document).ready(function(e) {
 			});
 		});
 	});
-	
+
+	outdatedBrowser({
+        bgColor: '#f25648',
+        color: '#ffffff',
+        lowerThan: 'transform',
+        languagePath: 'your_path/outdatedbrowser/lang/en.html'
+    });
+
 	/*Contact Info Animation*/
 	$('#strength').waypoint(function(direction) {
 		var contacts = $('.contact-details-wrap');
@@ -66,7 +73,7 @@ $(document).ready(function(e) {
 			contacts.addClass('fadeOutDown');
 		}
 	}, { offset: '10%' });
-		
+
 	/*Skill Bars Animation*/
 	$('.skillset').waypoint(function() {
 			$('.indicator').each(function() {
@@ -74,21 +81,20 @@ $(document).ready(function(e) {
 				 $(this).css('width', widthAnim + '%');
       });
 	}, { offset: '75%' });
-	
+
 	/*Swipebox Initialisation*/
 	$('.swipebox').swipebox();
-	
+
 	/*Feedback Form Validation*/
 	$('.contact-form').validate();
-	
+
 	/***********Portfolio Filtering**********/
 	$('.portfolio-filter a').click(function(e){
 			e.preventDefault();
 	});
-	
 
 	portfolio.init();
-	
+
 });/*/Document ready*/
 
 
@@ -101,7 +107,6 @@ var portfolio = (function( $ ) {
       $sizer = $grid.find('.shuffle__sizer'),
 
   init = function() {
-
 
     // None of these need to be executed synchronously
     setTimeout(function() {

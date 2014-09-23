@@ -27,8 +27,10 @@
   <link href="css/theme-styles.css" rel="stylesheet" media="screen">
   <!--Print Theme Styles-->
   <link href="css/print.css" rel="stylesheet" media="print">
+  <link href="css/outdatedbrowser.min.css" rel="stylesheet">
   <!-- AngularJS -->
   <script src="js/angular.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script> -->
   <!-- Firebase -->
   <script src="js/firebase.js"></script>
   <!-- AngularFire -->
@@ -36,12 +38,14 @@
   <script src="js/app.js"></script>
 
   <!--Modernizr-->
-  <script src="js/modernizr.custom.js"></script>
+  <!-- <script src="js/modernizr.custom.js"></script> -->
 
   <!--Adding Media Queries Support for IE8-->
-  <!--[if lt IE 9]>
+  <!--[if lt IE 10]>
       <script src="js/respond.min.js"></script>
     <![endif]-->
+
+    <script src="js/outdatedbrowser.min.js"></script>
 
 </head>
 
@@ -478,6 +482,8 @@
 
   </div>
   <!--Container Close-->
+
+  <div id="outdated"></div>
 
   <!--Javascript (jQuery) Libraries and Plugins-->
   <script src="js/jquery-1.10.2.min.js"></script>
