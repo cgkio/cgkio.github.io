@@ -27,15 +27,6 @@
   <link href="css/theme-styles.css" rel="stylesheet" media="screen">
   <!--Print Theme Styles-->
   <link href="css/print.css" rel="stylesheet" media="print">
-  <link href="css/outdatedbrowser.min.css" rel="stylesheet">
-  <!-- AngularJS -->
-  <script src="js/angular.min.js"></script>
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script> -->
-  <!-- Firebase -->
-  <script src="js/firebase.js"></script>
-  <!-- AngularFire -->
-  <script src="js/angularfire.min.js"></script>
-  <script src="js/app.js"></script>
 
   <!--Modernizr-->
   <!-- <script src="js/modernizr.custom.js"></script> -->
@@ -45,13 +36,11 @@
       <script src="js/respond.min.js"></script>
     <![endif]-->
 
-    <script src="js/outdatedbrowser.min.js"></script>
-
 </head>
 
 <!--Body-->
 
-<body ng-controller="ResumeCtrl">
+<body>
 
   <!--Page Preloading-->
   <div id="preloader">
@@ -91,8 +80,9 @@
         <div class="row">
           <div class="col-lg-12">
             <h2>Hello, I am Christian Kessler</h2>
-            <p class="large">{{resume.intro1}}</p>
-            <p class="large">{{resume.intro2}}</p>
+            <p class="large">I'm a creative person with an insatiable interest in the often overlooked — and undervalued — intersection of emerging (technological) trends on the customer experience.</p>
+            <p class="large">Take mobile banking, for example, and its de facto requirement for any bank worth its salt. Today, innovation in that arena is hard, expensive and usually requires long development times. But the banks that took the first plunge got great
+              praise for delivering simple, almost crude products — and reaped tremendous rewards for their relatively simple investments in time and energy.</p>
           </div>
         </div>
       </section>
@@ -103,8 +93,8 @@
         <div class="row">
           <div class="col-lg-12">
             <h2>Professional Objectives</h2>
-            <p class="large">{{resume.profobjs1}}</p>
-            <p class="large">{{resume.profobjs2}}</p>
+            <p class="large">To work in a small (internal) skunkworks on projects that focus on low-risk, high-reward R&D - a group that focuses on both radical product development as well as iterative improvements.</p>
+            <p class="large">And — in the long term — to grow a lean yet critically acclaimed laboratory for technical innovation in the customer experience arena.</p>
           </div>
         </div>
       </section>
@@ -125,7 +115,7 @@
               </div>
               <div class="col-lg-8 col-md-8 col-sm-8">
                 <h3>Iterative Design</h3>
-                <p>{{resume.bestiniterativedesign}}</p>
+                <p>The best products are the ones that properly define their MVP (minimally viable product) requirements, quickly launch, and then offer frequent, real-time updates of features and capabilities.</p>
               </div>
             </div>
             <div class="row strength">
@@ -134,7 +124,7 @@
               </div>
               <div class="col-lg-8 col-md-8 col-sm-8">
                 <h3>Mobile (user) experience</h3>
-                <p>{{resume.bestinmobile}}</p>
+                <p>Mobile is more than responsive design, it's about creating a transactional environment that focuses on frequent, high-impact user experiences.</p>
               </div>
             </div>
           </div>
@@ -145,7 +135,7 @@
               </div>
               <div class="col-lg-8 col-md-8 col-sm-8">
                 <h3>Emerging Technologies</h3>
-                <p>{{resume.bestinemergtech}}</p>
+                <p>Emerging technologies are particularly suited for SMBs and often offer rich opportunities in client retention and engagement - at low costs.</p>
               </div>
             </div>
             <div class="row strength">
@@ -154,7 +144,7 @@
               </div>
               <div class="col-lg-8 col-md-8 col-sm-8">
                 <h3>Minimum Viable Product (MVP)</h3>
-                <p>{{resume.bestinmvp}}</p>
+                <p>A fascination with trends and an economist's love of underlying causes gives me a sharp skill-set in understanding the minimally visible product nature of projects.</p>
               </div>
             </div>
           </div>
@@ -165,7 +155,7 @@
       <section class="full-width skills" id="skills">
         <a class="navi-link center scroll" href="#skills" id="4"><i class="icon-tools"></i></a>
         <div class="color-heading">
-          <h2>Skills</h2>
+          <h2>Technical Skills</h2>
         </div>
         <div class="skillset">
           <div class="skill">
@@ -179,11 +169,11 @@
           <div class="skill blue">
             <div class="row">
               <span class="indicator blue" data-percentage="30"></span>
-              <div class="col-lg-5 col-md-8 col-sm-4 title">{{resume.skillone}}</div>
+              <div class="col-lg-5 col-md-8 col-sm-4 title">Node.js</div>
               <div class="col-lg-7 col-md-4 col-sm-8">
-                <div class="column group">{{resume.skillone_yrsexperience}}<i class="skill-icon experience"></i>
+                <div class="column group">2<i class="skill-icon experience"></i>
                 </div>
-                <div class="column group">{{resume.skillone_projects}}<i class="skill-icon projects"></i>
+                <div class="column group">6<i class="skill-icon projects"></i>
                 </div>
               </div>
             </div>
@@ -191,35 +181,11 @@
           <div class="skill orange">
             <div class="row">
               <span class="indicator orange" data-percentage="40"></span>
-              <div class="col-lg-5 col-md-4 col-sm-4 title">{{resume.skilltwo}}</div>
+              <div class="col-lg-5 col-md-4 col-sm-4 title">Adobe InDesign</div>
               <div class="col-lg-7 col-md-8 col-sm-8">
-                <div class="column group">{{resume.skilltwo_yrsexperience}}<i class="skill-icon experience"></i>
+                <div class="column group">5<i class="skill-icon experience"></i>
                 </div>
-                <div class="column group">{{resume.skilltwo_projects}}<i class="skill-icon projects"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="skill grey">
-            <div class="row">
-              <span class="indicator grey" data-percentage="46"></span>
-              <div class="col-lg-5 col-md-4 col-sm-4 title">{{resume.skillthree}}</div>
-              <div class="col-lg-7 col-md-8 col-sm-8">
-                <div class="column group">{{resume.skillthree_yrsexperience}}<i class="skill-icon experience"></i>
-                </div>
-                <div class="column group">{{resume.skillthree_projects}}<i class="skill-icon projects"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="skill green">
-            <div class="row">
-              <span class="indicator green" data-percentage="68"></span>
-              <div class="col-lg-5 col-md-4 col-sm-4 title">{{resume.skillfour}}</div>
-              <div class="col-lg-7 col-md-8 col-sm-8">
-                <div class="column group">{{resume.skillfour_yrsexperience}}<i class="skill-icon experience"></i>
-                </div>
-                <div class="column group">{{resume.skillfour_projects}}<i class="skill-icon projects"></i>
+                <div class="column group">11<i class="skill-icon projects"></i>
                 </div>
               </div>
             </div>
@@ -227,36 +193,23 @@
           <div class="skill violet">
             <div class="row">
               <span class="indicator violet" data-percentage="53"></span>
-              <div class="col-lg-5 col-md-4 col-sm-4 title">{{resume.skillfive}}</div>
+              <div class="col-lg-5 col-md-4 col-sm-4 title">Responsive Design</div>
               <div class="col-lg-7 col-md-8 col-sm-8">
-                <div class="column group">{{resume.skillfive_yrsexperience}}<i class="skill-icon experience"></i>
+                <div class="column group">2<i class="skill-icon experience"></i>
                 </div>
-                <div class="column group">{{resume.skillfive_projects}}<i class="skill-icon projects"></i>
+                <div class="column group">4<i class="skill-icon projects"></i>
                 </div>
               </div>
             </div>
           </div>
-          <div class="skill black">
-            <div class="row">
-              <span class="indicator black" data-percentage="30"></span>
-              <div class="col-lg-5 col-md-4 col-sm-4 title">{{resume.skillsix}}</div>
-              <div class="col-lg-7 col-md-8 col-sm-8">
-                <div class="column group">{{resume.skillsix_yrsexperience}}<i class="skill-icon experience"></i>
-                </div>
-                <div class="column group">{{resume.skillsix_projects}}<i class="skill-icon projects"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <div class="skill blue">
             <div class="row">
               <span class="indicator blue" data-percentage="30"></span>
-              <div class="col-lg-5 col-md-8 col-sm-4 title">{{resume.trending_skillone}}</div>
+              <div class="col-lg-5 col-md-8 col-sm-4 title">Ionic (trending)</div>
               <div class="col-lg-7 col-md-4 col-sm-8">
-                <div class="column group">{{resume.trending_skillone_yrsexperience}}<i class="skill-icon experience"></i>
+                <div class="column group">1<i class="skill-icon experience"></i>
                 </div>
-                <div class="column group">{{resume.trending_skillone_projects}}<i class="skill-icon projects"></i>
+                <div class="column group">1<i class="skill-icon projects"></i>
                 </div>
               </div>
             </div>
@@ -264,11 +217,11 @@
           <div class="skill orange">
             <div class="row">
               <span class="indicator orange" data-percentage="40"></span>
-              <div class="col-lg-5 col-md-4 col-sm-4 title">{{resume.trending_skilltwo}}</div>
+              <div class="col-lg-5 col-md-4 col-sm-4 title">AngularJS (trending)</div>
               <div class="col-lg-7 col-md-8 col-sm-8">
-                <div class="column group">{{resume.trending_skilltwo_yrsexperience}}<i class="skill-icon experience"></i>
+                <div class="column group">1<i class="skill-icon experience"></i>
                 </div>
-                <div class="column group">{{resume.trending_skilltwo_projects}}<i class="skill-icon projects"></i>
+                <div class="column group">5<i class="skill-icon projects"></i>
                 </div>
               </div>
             </div>
@@ -276,11 +229,11 @@
           <div class="skill grey">
             <div class="row">
               <span class="indicator grey" data-percentage="46"></span>
-              <div class="col-lg-5 col-md-4 col-sm-4 title">{{resume.trending_skillthree}}</div>
+              <div class="col-lg-5 col-md-4 col-sm-4 title">Raspberry Pi (trending)</div>
               <div class="col-lg-7 col-md-8 col-sm-8">
-                <div class="column group">{{resume.trending_skillthree_yrsexperience}}<i class="skill-icon experience"></i>
+                <div class="column group">2<i class="skill-icon experience"></i>
                 </div>
-                <div class="column group">{{resume.trending_skillthree_projects}}<i class="skill-icon projects"></i>
+                <div class="column group">2<i class="skill-icon projects"></i>
                 </div>
               </div>
             </div>
@@ -288,11 +241,11 @@
           <div class="skill green">
             <div class="row">
               <span class="indicator green" data-percentage="68"></span>
-              <div class="col-lg-5 col-md-4 col-sm-4 title">{{resume.trending_skillfour}}</div>
+              <div class="col-lg-5 col-md-4 col-sm-4 title">Firebase (trending)</div>
               <div class="col-lg-7 col-md-8 col-sm-8">
-                <div class="column group">{{resume.trending_skillfour_yrsexperience}}<i class="skill-icon experience"></i>
+                <div class="column group">1<i class="skill-icon experience"></i>
                 </div>
-                <div class="column group">{{resume.trending_skillfour_projects}}<i class="skill-icon projects"></i>
+                <div class="column group">2<i class="skill-icon projects"></i>
                 </div>
               </div>
             </div>
@@ -300,11 +253,11 @@
           <div class="skill violet">
             <div class="row">
               <span class="indicator violet" data-percentage="53"></span>
-              <div class="col-lg-5 col-md-4 col-sm-4 title">{{resume.trending_skillfive}}</div>
+              <div class="col-lg-5 col-md-4 col-sm-4 title">Swift (trending)</div>
               <div class="col-lg-7 col-md-8 col-sm-8">
-                <div class="column group">{{resume.trending_skillfive_yrsexperience}}<i class="skill-icon experience"></i>
+                <div class="column group">0<i class="skill-icon experience"></i>
                 </div>
-                <div class="column group">{{resume.trending_skillfive_projects}}<i class="skill-icon projects"></i>
+                <div class="column group">0<i class="skill-icon projects"></i>
                 </div>
               </div>
             </div>
@@ -332,7 +285,8 @@
             </div>
             <h3>Architect of the Capitol</h3>
             <h4>Innovation Evangelist and General Technologist (Management and Program Analyst)</h4>
-            <p>{{resume.experienceaoc}}</p>
+            <p>Provide support and guidance to the Architect of the Capitol as a member of the Business Transformation Division and Performance, Strategy and Innovation teams. Core member of the strategic planning team with a heavy focus on leveraging technology
+              for performance improvements.</p>
           </div>
         </div>
         <div class="group">
@@ -346,7 +300,8 @@
             </div>
             <h3>Corporate Executive Board</h3>
             <h4>Business Analyst, CLC Solutions</h4>
-            <p>{{resume.experienceceb}}</p>
+            <p>Worked with clients throughout the problem solving life cycle, from issue definition, to outreach communication to measurement of results. Managed research and benchmarking for multiple client organizations (incl. both retail and corporate
+              environments), through both traditional and non-traditional methods</p>
           </div>
         </div>
         <div class="group">
@@ -360,7 +315,8 @@
             </div>
             <h3>McIntosh & Associates</h3>
             <h4>Consultant</h4>
-            <p>{{resume.experiencema}}</p>
+            <p>Provided customer relationship management (CRM) research and analysis, concentrating on user experience and satisfaction and self-service interactions. Evaluated self-service channels from the user perspective, analyzing user data to identify
+              areas for improvement and increased utilization. Coordinated feasibility and marketing studies to evaluate potential adoption rates for various technology channels.</p>
           </div>
         </div>
       </section>
@@ -376,17 +332,17 @@
             <div class="col-lg-4 item">
               <h3>University of London (Birkbeck College, London School of Economics)<br/>(2003 – 2004)</h3>
               <h4>ABT, MSc Corporate Governence and Ethics</h4>
-              <p>{{resume.educationlondon}}</p>
+              <p>Fellowship, Institute for Philanthropy; UCL Student Union; Holburn Philosophy Society</p>
             </div>
             <div class="col-lg-4 item">
               <h3>University of Pristina (Kosovo)<br/>(2003)</h3>
               <h4>Cert., Conflict Resolution</h4>
-              <p>{{resume.educationkosovo}}</p>
+              <p>Sponsored by the Ministry of Foreign Affairs (Netherlands) and the Ministry of Foreign Affairs of the Republic of Serbia</p>
             </div>
             <div class="col-lg-4 item">
               <h3>University of Oklahoma<br/>(1999 – 2003)</h3>
               <h4>BBA, Management</h4>
-              <p>{{resume.educationoklahoma}}</p>
+              <p>Crimson Club; Editor-in-Chief, What Possibilities Project</p>
             </div>
           </div>
         </div>
@@ -404,21 +360,23 @@
               <div style="background:url(img/awards/1.jpg) no-repeat;" class="award-1">
                 <span class="text">
                   <h3 class="light-text">3D Printing</h3>
-                  <p class="light-text middle">{{resume.interestone}}</p>
+                  <p class="light-text middle">I share everyone’s enthusiasm with 3D printing's potential to usher in a golden age of on-demand manufacturing, but I believe the real revolutionary magic is going to come from the dramatically shrunken capital requirements needed for the next Jobs and Wozniak.</p>
                 </span>
               </div>
               <div style="background:url(img/awards/2.jpg) no-repeat;" class="award-2">
                 <span class="text">
                   <h3 class="light-text">Mobile-ization</h3>
                   <h4>Third Screen or Radical New Paradigm?</h4>
-                  <p class="light-text middle">{{resume.interesttwo}}</p>
+                  <p class="light-text middle">I no longer scribble notes on what I want to do when I get to a computer, I start the work on my mobile phone. But it's no longer simple thoughts scribbled in the notes apps. I code on my computer. I watch TV on my computer. I FaceTime on my computer. But I read, write and manage my life on my phone.</p>
                 </span>
               </div>
             </div>
             <div class="col-lg-6 award-text">
               <h3>Gadget Economics</h3>
               <h4>Uniqueness or Capability?</h4>
-              <p>{{resume.interestthree}}</p>
+              <p>I wear a Bone Anchored Hearing Aid (BAHA) and everyone invariably says the same thing, “It’s amazing what technology can do today.” There’s always a gentle nod in agreement, but what I’m really thinking is how the design’s flawed, the code’s
+                juvenile, and price point makes it an absurd comparison (in terms of being awed) with the latest iPhone (or Apple Watch). That’s not to say the BAHA isn't a decent piece of technology, it’s more that the iPhone is a testament for the amazing
+                power of market-driven innovation.</p>
             </div>
           </div>
         </div>
@@ -434,13 +392,14 @@
           <div class="row">
             <div class="col-lg-12">
               <h3>DIY (Hobby) Electronics</h3>
-              <p>{{resume.hobbyone}}</p>
+              <p>An interest (and hobby) that marries my love of technology with my desire to continuously tweak — from my own alarm clock design to a beautiful, yet useless, robotic pet. Few things rivals the stimulation (and excitement) of a physical prototype
+                coming to life for the first time.</p>
             </div>
           </div>
           <div class="row">
             <div class="col-lg-12">
               <h3>Airports</h3>
-              <p>{{resume.hobbytwo}}</p>
+              <p>It’s Odd, I know. But I’ve always loved airports. It’s the technology, the economics, and the closed environment that makes it so fascinating. Plus who doesn’t like airplanes!</p>
             </div>
           </div>
         </div>
@@ -483,8 +442,6 @@
   </div>
   <!--Container Close-->
 
-  <div id="outdated"></div>
-
   <!--Javascript (jQuery) Libraries and Plugins-->
   <script src="js/jquery-1.10.2.min.js"></script>
   <script src="js/jquery.easing.1.3.js"></script>
@@ -495,19 +452,6 @@
   <script src="js/jquery.placeholder.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/scripts.js"></script>
-
-  <script>
-    var _gaq = [
-      ['_setAccount', 'UA-47033575-1'],
-      ['_trackPageview']
-    ];
-    (function(d, t) {
-      var g = d.createElement(t),
-        s = d.getElementsByTagName(t)[0];
-      g.src = '//www.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g, s)
-    }(document, 'script'));
-  </script>
 
 </body>
 <!--Body Close-->
