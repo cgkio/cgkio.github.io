@@ -1,382 +1,251 @@
-<!DOCTYPE html>         
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <title>Telly v1.0 User Guide</title>
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
-    <link rel='stylesheet' href='css/style.css' type='text/css' media='all' />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Intima Resume Template Documentation</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
 
-	<!--Body-->
   <body>
-  	
-    <!--Wrapper for Pushing Footer-->
-    <div class="wrapper">
-    
-      <!--Header-->
-      <div class="header">
-        <div class="container">
-        	<a class="logo" href="http://8guild.com" target="_blank"><img src="img/logo.png" alt="8 Guild"/></a>
-          <div class="heading">
-            <h1 class="normal">Telly Responsive Resume &amp; Portfolio Theme</h1>
-            <h3>Professional Resume and Portfolio Theme for Presenting Your Personal Information</h3>
-            <h5> Created for You by <a href="http://8guild.com" target="_blank">8Guild</a></h5>
-          </div>
-        </div>
-      </div><!--Close Header-->
-      
-      <div class="container content">
-      
-        <div class="tabs">
-          <ul class="tabs-links">
-            <li><a href="#Introduction">Introduction</a></li>
-            <li><a href="#FoldersFiles">Folders and Files</a></li>
-            <li><a href="#EditHTML">Customizing Template<br/>(Editing HTML Files)</a></li>
-            <li><a href="#EditCSS">Changing Look and Feel<br/>(Editing CSS Files)</a></li>
-            <li><a href="#Plugins">jQuery Plugins<br/>(Editing JS Files)</a></li>
-            <li><a href="#Photoshop">Photoshop Files</a></li>
-            <li><a href="#Credits">Sources and Credits</a></li>
-          </ul>
-          <div class="tabs-panes">
-          
-            <!--Tabs Pane-->
-            <div id="Introduction" class="tabs-pane">
-              <h2>Introduction</h2>
-              <div class="group">
-                <img src="img/screenshots/introduction.jpg" alt="Introduction"/>
-                <p class="justify"><strong>Telly</strong> is professional HTML5 Resume and Portfolio template. It's build with functionality in mind that means you will find all content blocks commonly used in CV and Resumes.</p>
-                <p>This one-page template has brand new navigation and built with modern technologies like HTML5, CSS3, jQuery, Bootstrap 3. It is fully responsive with clean modern design.</p>
-                <p><strong>Telly features include:<br/></strong>
-                	- Fullscreen one-page design<br/>
-                  - Two layout options<br/>
-                  - Brand new navigation<br/>
-                  - Trendy animations<br/>
-                  - Interactive portfolio filtering<br/>
-                  - Mobile friendly navigation<br/>
-                  - And many more
-                </p>
-              </div>
-            </div><!--/Tabs Pane-->
-          
-            <!--Tabs Pane-->
-            <div id="FoldersFiles" class="tabs-pane">
-              <h2>Folders and Files</h2>
-              <table width="100%" border="1">
-                <tr>
-                  <th scope="col">File Path</th>
-                  <th scope="col">Description</th>
-                </tr>
-                <tr>
-                  <td>Main</td>
-                  <td>Root folder</td>
-                </tr>
-                <tr>
-                  <td>Main/PSD</td>
-                  <td>
-                  	PSD Folder includes .psd file, <span class="underline">which is:</span><br/>
-                    telly.psd - Layered psd file of Telly Template with all typography and components
-                  </td>
-                </tr>
-                <tr>
-                  <td>Main/Telly</td>
-                  <td>This folder includes all HTML, CSS, Javascript, Fonts and Image files of the template.</td>
-                </tr>
-                <tr>
-                  <td>Main/Telly/version1.html</td>
-                  <td>This is Template page with profile image on the left side.</td>
-                </tr>
-                <tr>
-                  <td>Main/Telly/version2.html</td>
-                  <td>This is Template page with profile image on the right side.</td>
-                </tr>
-                <tr>
-                  <td>Main/Telly/css</td>
-                  <td>This folder includes all .css files. To change the appearance of the template you need to modify file: theme-styles.css.</td>
-                </tr>
-                <tr>
-                  <td>Main/Telly/js</td>
-                  <td>This folder includes all .js files (theme scripts, libraries and plugins). To edit Javascript functionality of the template you need to modify scripts.js file.</td>
-                </tr>
-                <tr>
-                  <td>Main/Telly/img</td>
-                  <td>This folder includes all graphic assets of the template. When you need to change images, icons, backgrounds, etc..this is the place to do it.</td>
-                </tr>
-                <tr>
-                  <td>Main/Telly/fonts</td>
-                  <td>This folder includes IcoMoon and Flaticon generated Fonts. They are  iconic fonts, that gives you customizable vector icons. For more information on how it works, please visit: <a href="http://icomoon.io/" target="_blank">IcoMoon Official Website</a> and <a href="http://www.flaticon.com/" target="_blank">Flaticon Official Website</a></td>
-                </tr>
-              </table>
-            </div><!--Close Tabs Pane-->
-            
-            <!--Tabs Pane-->
-            <div id="EditHTML" class="tabs-pane">
-              <h2>Customizing Template (Editing HTML Files)</h2>
-              <h3>HTML Structure</h3>
-              <p>HTML Code devided into sections that are represented by <strong>&lt;section&gt;</strong> tag. Each section is a block of content. Thus, if you want to change content of Objective block you do it in section with <strong>id=&#34;objective&#34;</strong>. Document is properly commented so you won't get lost. Please note the <strong>id</strong> tags of each section correlate with <strong>anchors</strong> in the side menu to allow scrolling navigation.</p>
-              <pre><code>
-                <span class="html-comment">&lt;!--Preloader--&gt;</span>
-                &lt;div id=&#34;preloader&#34;&gt;
-                  <span class="html-comment">&lt;!--Preloader Code Goes Here--&gt;</span>
-                &lt;/div&gt;
-                
-                <span class="html-comment">&lt;!--Container--&gt;</span>
-                &lt;div class=&#34;wrapper&#34;&gt;
-                  <span class="html-comment">&lt;!--Outer wrapper that holds sidebar with picture and main content--&gt;</span>
-                
-                    <span class="html-comment">&lt;!--Sidebar--&gt;</span>
-                    &lt;aside class=&#34;sidebar-wrap-left&#34;&gt;
-                      <span class="html-comment">&lt;!--Sidebar Code Goes Here--&gt;</span>
-                    &lt;/aside&gt;
-                    
-                    <span class="html-comment">&lt;!--Content--&gt;</span>
-                    &lt;div class=&#34;content-right&#34;&gt;
-                     
-                        <span class="html-comment">&lt;!--Introduction--&gt;</span>
-                        &lt;section class=&#34;intro&#34; id=&#34;intro&#34;&gt;
-                          <span class="html-comment">&lt;!--Content Goes Here--&gt;</span>
-                        &lt;/section&gt;
-                         
-                        <span class="html-comment">&lt;!--Objective--&gt;</span>
-                        &lt;section id=&#34;objective&#34;&gt;
-                          <span class="html-comment">&lt;!--Content Goes Here--&gt;</span>
-                        &lt;/section&gt;
-                         
-                        <span class="html-comment">&lt;!--Strength (Best In)--&gt;</span>
-                        &lt;section id=&#34;strength&#34;&gt;
-                          <span class="html-comment">&lt;!--Content Goes Here--&gt;</span>
-                        &lt;/section&gt;
-                         
-                        <span class="html-comment">&lt;!--Skills--&gt;</span>
-                        &lt;section class=&#34;full-width skills&#34; id=&#34;skills&#34;&gt;
-                          <span class="html-comment">&lt;!--Content Goes Here--&gt;</span>
-                        &lt;/section&gt;
-                        
-                        <span class="html-comment">&lt;!--Experience--&gt;</span>
-                        &lt;section class=&#34;experience-block&#34; id=&#34;experience&#34;&gt;
-                          <span class="html-comment">&lt;!--Content Goes Here--&gt;</span>
-                        &lt;/section&gt;
-                        
-                        <span class="html-comment">&lt;!--Education--&gt;</span>
-                        &lt;section class=&#34;education full-width color-bg&#34; id=&#34;education&#34;&gt;<span class="html-comment">&lt;!--color-bg class means color background--&gt;</span>
-                          <span class="html-comment">&lt;!--Content Goes Here--&gt;</span>
-                        &lt;/section&gt;
-                        
-                        <span class="html-comment">&lt;!--Portfolio--&gt;</span>
-                        &lt;section class=&#34;portfolio full-width&#34; id=&#34;portfolio&#34;&gt;
-                          <span class="html-comment">&lt;!--Content Goes Here--&gt;</span>
-                        &lt;/section&gt;
-                        
-                        <span class="html-comment">&lt;!--Awards--&gt;</span>
-                        &lt;section class=&#34;awards color-bg full-width&#34; id=&#34;awards&#34;&gt;
-                          <span class="html-comment">&lt;!--Content Goes Here--&gt;</span>
-                        &lt;/section&gt;
-                        
-                        <span class="html-comment">&lt;!--Recommendations--&gt;</span>
-                        &lt;section class=&#34;recommend full-width&#34; id=&#34;recommend&#34;&gt;
-                          <span class="html-comment">&lt;!--Content Goes Here--&gt;</span>
-                        &lt;/section&gt;
-                        
-                        <span class="html-comment">&lt;!--Hobby--&gt;</span>
-                        &lt;section class=&#34;hobby color-bg full-width&#34; id=&#34;hobby&#34;&gt;
-                          <span class="html-comment">&lt;!--Content Goes Here--&gt;</span>
-                        &lt;/section&gt;
-                        
-                        <span class="html-comment">&lt;!--Contact Form--&gt;</span>
-                        &lt;section id=&#34;contact-form&#34;&gt;
-                          <span class="html-comment">&lt;!--Content Goes Here--&gt;</span>
-                        &lt;/section&gt;
-                        
-                        <span class="html-comment">&lt;!--Social--&gt;</span>
-                        &lt;section class=&#34;full-width&#34; id=&#34;social&#34;&gt;
-                          <span class="html-comment">&lt;!--Content Goes Here--&gt;</span>
-                        &lt;/section&gt;
-                        
-                        <span class="html-comment">&lt;!--Files--&gt;</span>
-                        &lt;section class=&#34;files full-width&#34; id=&#34;files&#34;&gt;
-                          <span class="html-comment">&lt;!--Content Goes Here--&gt;</span>
-                        &lt;/section&gt;
-                        
-                        <span class="html-comment">&lt;!--Footer--&gt;</span>
-                        &lt;footer class=&#34;group&#34;&gt;
-                          <span class="html-comment">&lt;!--Content Goes Here--&gt;</span>
-                        &lt;/footer&gt;
-                        
-                    &lt;/div&gt;<span class="html-comment">&lt;!--Content Close--&gt;</span>
-                    
-                &lt;/div&gt;<span class="html-comment">&lt;!--Container Close--&gt;</span>
-                 
-              </code></pre>
-              
-              <h3>Editing Scrolling Navigation</h3>
-              <p>Each link of the navigation is placed inside <strong>section tag</strong> of relevant content block</p>
-              <p>To edit it you need to go to appropriate section.</p>
-              <p>For example, you want to change icon of objective link, look at the code below (it's highlited in bold):</p>
-              <pre><code>
-                <span class="html-comment">&lt;!--Objective--&gt;</span>
-                  &lt;section id=&#34;objective&#34;&gt;
-                  	<strong>&lt;a class="navi-link scroll-top-40" href="#objective" id="2"&gt;&lt;i class="icon-target"&gt;&lt;/i&gt;&lt;/a&gt;</strong>
-                    .............................................                        
-                  &lt;/section&gt;
-              </code></pre>
-              <p><strong>Pay attention to the "id" of the link. It represents the order in which content blocks appear on the page. If you re-order them you need to change id's respectively.</strong></p>
-              
-              <h3>Replacing Profile Picture</h3>
-              <p>To change profile image in the Sidebar you need to find and replace <strong>Telly / img / profile-pic.jpg</strong> with your own. Ideal width of the image is <strong>970-980px</strong>.</p>
-              <p><strong>Pay attention: the Sidebar has background color aaplied to it. This color is the same with the color from bottommost part of the image. Such technique creates the illusion that image is 100% height. When you change profile picture make sure you adjust Sidebar background color as well (line #142 in theme-styles.css).</strong></p>
-              <pre><code>
-              	.sidebar {
-                  height: auto;
-                  position: fixed;
-                  width: 100%;
-                  min-height: 100%;
-                  <strong>background-color: #12121a;</strong>
-                  z-index: 0;
-                }
-              </code></pre>
-              <h3>Editing Content in Other Blocks</h3>
-              <p>To change images, texts and other content in chosen content block you need to find section with appropriate <strong>"id" tag</strong>. 
-              <p>For example, to edit content of the <strong>"Best In" block</strong> go to section with <strong>id="strength"</strong>. If you need simply replace the images but retain content structure as it is you can do that in folder: <strong>Telly / img / strength</strong>.</p>
-              <h3>Changing Icons</h3>
-              <p>In this template we used 2 Icon fonts: <strong>IcoMoon (TellyFont) and Flaticon used for social networks only</strong>. They are Font icons which means you can easily change them by replacing <strong>icon-iconName class.</strong> in case of IcoMoon or <strong>flaticon-socialIconName class.</strong> if you used FontAwsome icons.</p>
-            </div><!--/Tabs Pane-->
-            
-            <!--Tabs Pane-->
-            <div id="EditCSS" class="tabs-pane">
-              <h2>Changing Look and Feel (Editing CSS Files)</h2>
-              <p>There are two main CSS files that affect this template: <strong>bootstrap.min.css; theme-styles.css</strong>.</p>
-              <p><strong>bootstrap.min.css</strong> - is Bootstrap 3.1.1 .css file which enables responsiveness and other features. Telly template based on Bootstrap 3.1.1 grid system. To learn more about Bootstrap 3.1 please visit <a href="http://getbootstrap.com/" target="_blank">http://getbootstrap.com/</a></p>
-              <p><strong>theme-styles.css</strong> - is the stylesheet with all styles relating to this template. So whatever you need to change, change it there.</p>
-              <h3>Changing Color of Headings</h3>
-              <p>In you want to change headings color (shade of blue by default) you can easily do this by editing <strong>.color-heading</strong> rules. It's line #96 in theme-styles.css</p>
-              <p>In you want to change baground color of some content blocks (like Education) simply edit <strong>.color-bg</strong> rules. It's line #250 in theme-styles.css</p>
-              <h3>Changing Typography</h3>
-              <p>In the <strong>"Body"</strong> section of the theme-styles.css file (line #32) you can globally change <strong>font-family and font-color</strong> of the template.</p>
-              <pre><code>
-                <span class="html-comment">/*Body*/</span>
-                  body {
-                    font-family: 'Lato', Arial, Helvetica, sans-serif;
-                    background-color: #ffffff;
-                    font-weight: normal;
-                    color: #000000;
-                    line-height: 1;
-                    -webkit-font-smoothing: antialiased;
-                    margin: 0;
-                    padding: 0;
-                  }
-              </code></pre>
-              <p>To change typography styles you need to go to <strong>"Typography"</strong> section of the theme-styles.css file. It's line #43. Here you can globally change <strong>font color, font size, headings, paragraphs, list styles, etc..</strong></p>
-              <pre><code>
-                <span class="html-comment">/*Typography*/</span>
-                h1 {
-                  font-size: 4.4em;
-                  text-transform: uppercase;
-                  text-align: center;
-                  font-weight: bold;
-                }
-                h2 {
-                  font-size: 2.2em;
-                  text-transform: uppercase;
-                  font-weight: normal;
-                  -webkit-margin-before: 0em;
-                  -webkit-margin-after: 0em;
-                  margin-bottom: 20px;
-                }
-                .............................
-                p {
-                  font-size: 1em;
-                  margin-bottom: 20px;
-                  line-height: 1.7;
-                }
-                .............................
-              </code></pre>
-              <h3>Print Styles</h3>
-              <p>Print styles is responsible for how your document appears when Print window is called from browser (by clicking on the button in bottom of the page or Ctrl+P). To edit print styles you need to go to <strong>Telly / css / print.css</strong>.</p>
-              <h3>Changing Other Styles</h3>
-              <p>CSS files segmented and commented the same way as HTML files. So, for example, if you want to change Forms styles you need to go to the relevant section in the CSS file.</p>
-            </div><!--/Tabs Pane-->
-            
-            <!--Tabs Pane-->
-            <div id="Plugins" class="tabs-pane">
-              <h2>jQuery Plugins (Editing JS Files)</h2>
-              <h3>Plugins Used</h3>
-              <p>While creating this template we used some Javascript (jQuery) plugins to extend its functionality:<strong>*</strong></p>
-              <p><strong><a href="http://jquery.com/" target="_blank">jQuery v1.10.2</a></strong> - most popular feature-rich JavaScript library.</p>
-              <p><strong><a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="_blank">jQuery Easing v1.3</a></strong> - add-on for jQuery to create nice easing effects.</p>
-              <p><strong><a href="http://modernizr.com/" target="_blank">Modernizr</a></strong> - JavaScript library that detects HTML5 and CSS3 features in the user’s browser.</p>
-              <p><strong><a href="https://github.com/scottjehl/Respond" target="_blank">Respong.js</a></strong> - script enables responsive web designs in browsers that don't support CSS3 Media Queries - in particular, Internet Explorer 8 and under.</p>
-              <p><strong><a href="http://vestride.github.io/Shuffle/" target="_blank">Shuffle.js</a></strong> - Plugin for interactively categorize, sort, and filter a responsive grid of items.</p>
-              <p><strong><a href="http://brutaldesign.github.io/swipebox/" target="_blank">Swipebox</a></strong> - A touchable jQuery lightbox.</p>
-              <p><strong><a href="http://imakewebthings.com/jquery-waypoints/" target="_blank">Waypoints</a></strong> - jQuery plugin that makes it easy to execute a function whenever you scroll to an element.</p>
-              <p><strong><a href="http://jqueryvalidation.org/" target="_blank">jQuery Validate</a></strong> -  Clientside Form Validation Plugin.</p>
-              <p><strong><a href="http://bigspotteddog.github.io/ScrollToFixed/" target="_blank">ScrollToFixed</a></strong> -  jQuery plugin is used to fix elements on the page.</p>
-              <p><strong>*</strong>To get more detailed information about how to use / customize these plugins please visit their official websites.</p>
-              <p><strong>Please be informed that we DO NOT provide support to any third party plugin's. We can only answer simple usage questions or issues related to incompatibility with the template.</strong></p>
-              <h3>Editing Files</h3>
-              <p>Like with HTML and CSS files to customize the JavaScript functionality of the template you need to edit <strong>scripts.js file</strong>.</p>
-              <p>This file is holding all custom JavaScript code for the template. It is properly commented so you easily find nesessary code snippet to modify.</p>
-            </div><!--/Tabs Pane-->
-            
-            <!--Tabs Pane-->
-            <div id="Photoshop" class="tabs-pane">
-              <h2>Photoshop Files</h2>
-              <p>All Photoshop files related to this template you will find in the <strong>PSD folder</strong>.</p>
-              <p class="underline">There is only one .psd file:</p>
-              <p><strong>telly.psd</strong> - Layered psd file of Telly Template with all typography and components.</p>
-              <p>*Please note this file is production versions and could vary from final template. But still you will find there all necessary graphics and mockups to customize your site.</p>
-              <h3>Photoshop Layers</h3>
-              <p>All layers are grouped and named according to content blocks of the template. So it will be easy to spot the piece of content you want to modify.</p>
-              <img src="img/screenshots/photoshop_layers.jpg" alt="Photoshop Layers"/>
-              <p>To learn more about how to use Photoshop to edit images and graphics we recommend <a href="http://tv.adobe.com/videos/photoshop/" target="_blank"><strong>Photoshop on Adobe TV</strong></a></p>
-            </div><!--/Tabs Pane-->
-            
-            <!--Tabs Pane-->
-            <div id="Credits" class="tabs-pane">
-              <h2>Sources and Credits</h2>
-              <p>While making this theme we used third party plugins, images, icons, fonts, etc... and want to thank their creators:</p>
-              <ul>
-              	<li>Pictures:<br/>
-                	<a href="http://unsplash.com/" target="_blank">http://unsplash.com/</a><br/>
-                  <span>Profile picture used in this template is our own (staff). Kindly ask you not to use it in your commercial projects. It's for demo purpose only.</span>
-                </li>
-              	<li>IcoMoon icons <a href="http://icomoon.io/" target="_blank">http://icomoon.io/</a></li>
-              	<li>Flaticon icons <a href="http://www.flaticon.com/" target="_blank">http://www.flaticon.com/</a></li>
-              	<li>Bootstrap 3.1.1 <a href="http://getbootstrap.com/" target="_blank">http://getbootstrap.com/</a></li>
-              	<li>jQuery Library <a href="http://jquery.com/" target="_blank">http://jquery.com</a></li>
-              	<li>jQuery Easing Plugin <a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="_blank">http://gsgd.co.uk/sandbox/jquery/easing</a></li>
-              	<li>Modernizr <a href="http://modernizr.com/" target="_blank">http://modernizr.com</a></li>
-              	<li>Respong.js <a href="https://github.com/scottjehl/Respond" target="_blank">https://github.com/scottjehl/Respond</a></li>
-              	<li>Shuffle.js <a href="http://vestride.github.io/Shuffle/" target="_blank">http://vestride.github.io/Shuffle/</a></li>
-              	<li>jQuery Validation <a href="http://jqueryvalidation.org/" target="_blank">http://jqueryvalidation.org/</a></li>
-                <li>Swipebox <a href="http://brutaldesign.github.io/swipebox/" target="_blank">http://brutaldesign.github.io/swipebox/</a></li>
-                <li>Waypoints <a href="http://imakewebthings.com/jquery-waypoints/" target="_blank">http://imakewebthings.com/jquery-waypoints/</a></li>
-                <li>jQuery Placeholder <a href="https://github.com/mathiasbynens/jquery-placeholder" target="_blank">https://github.com/mathiasbynens/jquery-placeholder</a></li>
-                <li>ScrollToFixed <a href="http://bigspotteddog.github.io/ScrollToFixed/" target="_blank">http://bigspotteddog.github.io/ScrollToFixed/</a></li>
-              </ul>
-              <p><strong>All the third-party assets used in this template are free for personal and commercial use.</strong></p>
-            </div><!--/Tabs Pane-->
-            
-          </div><!-- Close all Panes -->
-        </div>
-      </div><!-- Close Container -->
-    
-    </div><!--Close Wrapper-->
-    
-    <!--Footer-->
-    <div class="footer">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
-        <div class="support-message">
-          <p>Dear User, thank you for purchasing our template!  If you have any questions that are beyond the scope of this help file, please feel free to email us using the link below.</p>
-          <a class="normal" href="mailto:support@8guild.com">support@8guild.com</a>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          
         </div>
-          <div class="copyright">&copy; 2014 8 Guild. All Rights Reserved.</div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#html">HTML Structure</a></li>
+            <li><a href="#css">CSS Structure</a></li>
+            <li><a href="#js">JavaScripts</a></li>
+            <li><a href="#customize">Customizing</a></li>
+            <li><a href="#source">Source &amp; Credits</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
       </div>
-    </div><!--Close Footer-->
-  
-  </body><!--Close Body-->
-  
-  <!--Javascript-->
-	<script src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-  <script type="text/javascript" src="js/scripts.js"></script>
-  
+    </div>
+
+    <div class="container">
+
+      <div id="home" class="starter-template">
+        <h1>Intima - Responsive Resume Template Documentation</h1>
+        <p class="lead">Thank you for purchasing this template. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form here. Thanks so much!.</p>
+
+        <div class="row"><img src="assets/images/preview.jpg"></div> <br> <br>
+        <div class="row">
+          <a href="http://bdinfosys.com/R/resume/" class="btn btn-info btn-lg" target="_blank">Demo</a>
+          <a href="http://themeforest.net/user/bdinfosys" class="btn btn-success btn-lg" target="_blank">Purchase</a>
+        </div>
+      </div>
+
+
+    <section id="html">
+      <h1>HTML Structure</h1>
+      <hr>
+
+      <p>This template is based on tweleve colums. Each section is nested within a <b>section</b> tag with an unique ID that used for on-page navigation. <br>
+        For your convenience every sections and divs are well commented so that you can understand easily.</p>
+
+      <img src="assets/images/html-structure.png">
+    </section> 
+
+    <section id="css">
+      <h1>CSS Files and Structure</h1>
+      <hr>
+
+      <p>I'm using few CSS files in this template. The first three is main structure CSS, stylesheet and Responsive CSS files.  <a href="http://www.fontawesome.io">Font Awesome </a> for icons and some other <a href="http://google.com/fonts">Google Fonts</a> are imported to <em>default.css</em> <br>
+      Rest of the files are specific for the other libraries like animation, pop-up, carousel etc.</p>
+
+      <img src="assets/images/css-structure.png">
+
+      <p>If you would like to edit a specific section of the site, simply find the appropriate label in the CSS file, and then scroll down until you find the appropriate style that needs to be edited. <br>
+        All CSS sections are also well commented :</p>
+
+        <img src="assets/images/css2.png">
+        <br>
+        <br>
+
+        <h3><em> default.css</em></h3>
+
+        <p>default.css contains the font imports, reset.css and other basic styling. You don't have to edit this file for changing style. If you want the change the Google Fonts, structure (i.e columns, default grids etc.) then edit it, otherwise leave it as it is. </p>
+        <img src="assets/images/default-css.png">     <br> <br> <br>   
+
+
+
+        <h3><em> style.css</em></h3>
+
+        <p>style.css contains the the main styling for the template. You will find styling for each section commented with the section title like below- </p>
+        <img src="assets/images/style-css.png"> <br>
+
+        <p>Just change your styles according to your choices.</p> <br> <br> <br>  
+
+        <h3><em> responsive.css</em></h3>
+
+        <p>responsive.css contains the the device specific (according to screen size) styling. You will find the responsive codes using media queries like the image below -  </p>
+        <img src="assets/images/responsive-css.png"> <br>
+
+        <p>You have to go through the specified screen resolution range (i.e <em>@media only screen and (max-width: 480px) {}</em> for mobile devices) and change the styles of any class/id you need.</p>
+
+
+    </section> 
+
+    <section id="js">
+      <h1>JavaScripts</h1>
+      <hr>
+
+      <p>JavaScript Files are placed at the bottom of the page just before closing the body. <br>
+
+      This theme imports three Javascript files.
+      <ul>
+        <li> jQuery</li>
+        <li> My custom scripts</li>
+        <li> Some plugin</li>
+      </ul>
+
+  </p>
+
+      <img src="assets/images/js.png">
+
+      <p><b>script.js</b> is the main javascript files for the template where custom JS codes are written and other libraries are triggered through this script. <br> <br>
+        This JS file is also well commented and easily readable. You can change the code and customize as per your requirements easily.</p>
+
+        <img src="assets/images/js2.png">
+
+    </section> 
+
+
+    <section id="customize">
+      <h1>Customizing Template</h1>
+      <hr>
+
+      <p>This template is easily customizable. HTML, CSS and JS file structure is placed earlier that are well commented.
+
+<br>
+        If you want to customize any section, you will find the unique identifier (ID) on HTML and CSS files like below : 
+
+        <h4>HTML</h4>
+
+        <img src="assets/images/customize1.png">
+
+
+        <h4>CSS</h4>
+
+        <img src="assets/images/customize2.png">
+
+      </p>
+
+<p>Just find the CSS id and class on your desired HTML Elements and change it from the CSS file. <br>
+
+<b>If you face any problem, send your mail for support drom our user page.</b></p>
+
+
+<h2>Customizing Header Section</h2>
+
+<p>You will see a blurring effect on header while scrolling. I have used to images for that effects. One is clear and another is blurred. If you wish to use you own image then make a blurred version of your image with same dimension. i.e just use "Gaussian Blur" filter with Adobe Photoshop and save it with a different name. <br> See the image below where to use those : </p>
+
+<p>Use the clear one for <em>header</em> tag</p>
+
+<img src="assets/images/header-1.png">
+
+<p>Use the bluured one for <em>header-overlay</em> class</p>
+
+<img src="assets/images/header-2.png">
+
+
+<p>Rest of the customization is pretty easy. HTML and CSS files are well documented for your convenience. <br> If you still face any problem, let's contact through our profile to get support. </p>
+
+
+<h2>Using Send email form</h2>
+
+<p>This template includes a working send to email form for contact section. You can use your own email to get message directly from the contact form.</p>
+
+<p>To use the form go to <em>inc/sendEmail.php</em> file and replace the email with your own email.</p>
+
+<img src="assets/images/email-form.png"> <br> <br>
+
+
+<h2>Using Google Map and your own address</h2>
+
+
+<p>To use the form go to <em>js/script.js</em> file and replace the latitude and longitude with your own location. <br> You can also set your own address to show on pop-up.</p>
+
+<img src="assets/images/google-map.png"> <br> <br>
+</section> 
+
+    <section id="source">
+      <h1>Source &amp; Credits</h1>
+      <hr>
+
+      <h3>CSS and JavaScripts Libraries</h3>
+<p>The following CSS and JS libraries are used to craft this template. </p>
+      <ul>
+        <li><a href="http://fontawesome.io">Font Awesome Icons</a></li>
+        <li><a href="http://owlgraphic.com/owlcarousel/">Owl Carousel</a></li>
+        <li><a href="http://daneden.me/animate">Animate.css</a></li>
+        <li><a href="https://github.com/imakewebthings/jquery-waypoints/">jQuery Waypoints</a></li>
+        <li><a href="http://mynameismatthieu.com/WOW/">WOW JS</a></li>
+        <li><a href="http://sam.zoy.org/wtfpl/">FitText.js</a></li>
+        <li><a href="http://hpneo.github.com/gmaps/">GMaps.js</a></li>
+        <li><a href="https://github.com/inuyaksa/jquery.nicescroll">jQuery Nicescroll</a></li>
+        <li><a href="http://bit.ly/magnific-popup#build=inline+image+retina+imagezoom+fastclick">Magnific Popup</a></li>
+      </ul>
+
+<br>
+
+      <h3>Image Credits</h3>
+
+      <p>The images used on this template and preview are from the following author(s) : </p>
+
+      <ul>
+
+        <li>
+          Author : <a href="https://www.flickr.com/photos/125167502@N02/"> Markus Spiske </a> <br>
+          Website :  <a href="http://temporausch.com/01/">www.temporausch.com/01/</a>
+        </li> 
+
+      </ul>
+
+
+    </section> 
+
+    <footer>
+
+      <p>Once again, thank you so much for purchasing this item. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p>
+
+    </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>

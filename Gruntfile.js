@@ -34,7 +34,7 @@ module.exports = function(grunt) {
         tasks: ['bowerInstall']
       },
       js: {
-      files: ['<%= config.app %>/css/{,*/}*.js'],
+        files: ['<%= config.app %>/css/{,*/}*.js'],
         tasks: ['jshint'],
         options: {
           livereload: true
@@ -44,7 +44,7 @@ module.exports = function(grunt) {
         files: ['Gruntfile.js']
       },
       styles: {
-      files: ['<%= config.app %>/css/{,*/}*.css'],
+        files: ['<%= config.app %>/css/{,*/}*.css'],
         tasks: ['newer:copy:styles', 'autoprefixer']
       },
       livereload: {
@@ -54,7 +54,7 @@ module.exports = function(grunt) {
         files: [
           '<%= config.app %>/{,*/}*.html',
           '.tmp/styles/{,*/}*.css',
-        '<%= config.app %>/img/{,*/}*'
+          '<%= config.app %>/images/{,*/}*'
         ]
       }
     },
@@ -140,7 +140,7 @@ module.exports = function(grunt) {
       },
       all: [
         'Gruntfile.js',
-      '<%= config.app %>/js/{,*/}*.js',
+        '<%= config.app %>/js/{,*/}*.js',
         '!<%= config.app %>/js/vendor/*'
       ]
     },
@@ -173,10 +173,10 @@ module.exports = function(grunt) {
     // Performs rewrites based on rev and the useminPrepare configuration
     usemin: {
       options: {
-        assetsDirs: ['<%= config.dist %>', '<%= config.dist %>/img']
+        assetsDirs: ['<%= config.dist %>', '<%= config.dist %>/images']
       },
       html: ['<%= config.dist %>/{,*/}*.html'],
-    css: ['<%= config.dist %>/css/{,*/}*.css']
+      css: ['<%= config.dist %>/css/{,*/}*.css']
     },
 
     // The following *-min tasks produce minified files in the dist folder
@@ -184,9 +184,9 @@ module.exports = function(grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '<%= config.app %>/img',
+          cwd: '<%= config.app %>/images',
           src: '{,*/}*.{gif,jpeg,jpg,png}',
-          dest: '<%= config.dist %>/img'
+          dest: '<%= config.dist %>/images'
         }]
       }
     },
@@ -195,9 +195,9 @@ module.exports = function(grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '<%= config.app %>/img',
+          cwd: '<%= config.app %>/images',
           src: '{,*/}*.svg',
-          dest: '<%= config.dist %>/img'
+          dest: '<%= config.dist %>/images'
         }]
       }
     },
@@ -261,9 +261,9 @@ module.exports = function(grunt) {
             '*.{ico,png,txt}',
             'CNAME',
             '.htaccess',
-            'img/{,*/}*.webp',
+            'images/{,*/}*.webp',
             '{,*/}*.html',
-            'styles/fonts/{,*/}*.*',
+            'css/fontello/{,*/}*.*',
             'fonts/{,*/}*.*'
           ]
         }, {
