@@ -55,12 +55,12 @@ $(document).ready(function(e) {
 		});
 	});
 
-	outdatedBrowser({
-        bgColor: '#f25648',
-        color: '#ffffff',
-        lowerThan: 'transform',
-        languagePath: 'your_path/outdatedbrowser/lang/en.html'
-    });
+	// outdatedBrowser({
+  //       bgColor: '#f25648',
+  //       color: '#ffffff',
+  //       lowerThan: 'transform',
+  //       languagePath: 'your_path/outdatedbrowser/lang/en.html'
+  //   });
 
 	/*Contact Info Animation*/
 	$('#strength').waypoint(function(direction) {
