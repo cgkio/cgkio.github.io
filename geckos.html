@@ -1,0 +1,90 @@
+<html>
+
+<head>
+  <style>
+    body {
+      background-color: #16113A;
+    }
+
+    .bannerText {
+      font-size: 36px;
+      letter-spacing: 3px;
+      text-transform: capitalize;
+    }
+
+    #bannerText {
+      padding-top: 43px;
+    }
+  </style>
+</head>
+
+<body>
+  <script src="https://momentjs.com/downloads/moment.min.js"></script>
+
+  <iframe id="inlineFrameExample" title="Inline Frame Example" width="3840" height="2010" src="" style="border:0px solid lightgrey;">
+  </iframe>
+
+  <center>
+    <div class="bannerText" style="color:white" id="bannerText">
+      <small>Monday:</small> TSA Checkpoint Volume | <small>Tuesday:</small> Dulles Toll Road | <small>Wednesday:</small> Taxi & TNC | <small>Thursday:</small> Flight Activity | <small>Friday:</small> Parking
+    </div>
+  </center>
+
+  <script>
+    function loadFrame() {
+      var today = moment().format("dddd");
+      console.log(today);
+
+      if (today == "Monday") {
+        document.getElementById("inlineFrameExample").src = 'https://share.geckoboard.com/dashboards/K7QTUPLSKDLXGPOL'
+      } else if (today == "Tuesday") {
+        document.getElementById("inlineFrameExample").src = 'https://share.geckoboard.com/dashboards/7DNTXK6SURLPG664'
+      } else if (today == "Wednesday") {
+        document.getElementById("inlineFrameExample").src = 'https://share.geckoboard.com/dashboards/ZSFTGIBTF4CXNE3V'
+      } else if (today == "Thursday") {
+        document.getElementById("inlineFrameExample").src = 'https://share.geckoboard.com/dashboards/2K35QZVR3ALJESJ7'
+      } else if (today == "Friday") {
+        document.getElementById("inlineFrameExample").src = 'https://share.geckoboard.com/dashboards/RY2RNLFQEKMYIKKN'
+      } else {
+        document.getElementById("inlineFrameExample").src = ''
+      };
+    };
+
+    //run on page load
+    loadFrame();
+
+    8
+
+    function every2am() {
+      var now = new Date(),
+        start,
+        wait;
+
+      if (now.getHours() < 1) {
+        start = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 2, 0, 0, 0);
+      } else {
+        start = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 2, 0, 0, 0);
+      }
+
+      wait = start.getTime() - now.getTime();
+
+      if (wait <= 0) { //If missed 8am before going into the setTimeout
+        console.log('Oops, missed the hour');
+        every2am(); //Retry
+      } else {
+        setTimeout(function() { //Wait 2am
+          setInterval(function() {
+            loadFrame();
+          }, 86400000); //Every day
+        }, wait);
+      }
+    };
+
+    every2am();
+
+
+  </script>
+
+</body>
+
+</html>
