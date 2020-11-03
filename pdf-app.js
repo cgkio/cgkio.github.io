@@ -31,7 +31,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
         content: {
             /* Location of file where it is hosted */
             location: {
-                url: "./IAD.pdf",
+                url: "https://documentcloud.adobe.com/link/review?uri=urn:aaid:scds:US:cc2734eb-796e-4136-ac53-98304ddd1c69",
                 /*
                 If the file URL requires some additional headers, then it can be passed as follows:-
                 headers: [
@@ -50,6 +50,3 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
         }
     }, viewerConfig);
 });
-
-
-// https://documentcloud.adobe.com/link/review?uri=urn:aaid:scds:US:cc2734eb-796e-4136-ac53-98304ddd1c69
