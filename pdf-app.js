@@ -3,16 +3,21 @@ const PDFStart = nameRoute => {
         pdfDoc = null,
         canvas = document.querySelector('#cnv'),
         ctx = canvas.getContext('2d'),
-        scale = 1.5,
+        scale = 1.0,
         numPage = 1;
 
         const GeneratePDF = numPage => {
 
             pdfDoc.getPage(numPage).then(page => {
 
+              // canvas.height = viewport.height;
+              // canvas.width = viewport.width;
+
                 let viewport = page.getViewport({ scale: scale });
-                    canvas.height = viewport.height;
-                    canvas.width = viewport.width;
+                    canvas.height = 748;
+                    canvas.width = 1024;
+
+                    console.log(viewport);
 
                 let renderContext = {
                     canvasContext : ctx,
