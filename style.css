@@ -1,47 +1,101 @@
 /* style.css */
 #map-container {
-    position: relative;
-    display: inline-block;
-    width: 1920px;
-    height: 1080px;
-  }
-  
-  #map-container img {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .door {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-  }
+  position: relative;
+  display: inline-block;
+  width: 1920px;
+  height: 1080px;
+}
 
-  .doorMsg {
-    position: absolute;
-    transform: rotate(-90deg);
-  }
+#map-container img {
+  width: 100%;
+  height: 100%;
+}
 
-  .smalltext {
-    font-size: 8px;
+.door {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.doorMsg {
+  position: absolute;
+  transform: rotate(-90deg);
+}
+
+.smalltext {
+  font-size: 8px;
+}
+
+.green-door {
+  animation: glow 2s infinite;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5), 0 0 10px rgba(0, 255, 0, 0.5);
+    transform: scale(1);
   }
-  
-  .green-door {
-    animation: glow 2s infinite;
+  50% {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5), 0 0 30px rgba(0, 255, 0, 0.5);
+    transform: scale(1.2);
   }
-  
-  @keyframes glow {
-    0% {
-      box-shadow: 0 0 5px rgba(0, 255, 0, 0.5), 0 0 10px rgba(0, 255, 0, 0.5);
-      transform: scale(1);
-    }
-    50% {
-      box-shadow: 0 0 20px rgba(0, 255, 0, 0.5), 0 0 30px rgba(0, 255, 0, 0.5);
-      transform: scale(1.2);
-    }
-    100% {
-      box-shadow: 0 0 5px rgba(0, 255, 0, 0.5), 0 0 10px rgba(0, 255, 0, 0.5);
-      transform: scale(1);
-    }
+  100% {
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5), 0 0 10px rgba(0, 255, 0, 0.5);
+    transform: scale(1);
   }
+}
+
+#average-turnaround-time-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#individual-turnaround-times-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.individual-turnaround-time {
+  width: 150px;
+  text-align: center;
+}
+
+#individual-turnaround-times-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+#status-message-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#status-message {
+  font-size: 36px;
+  animation: flash 1s linear infinite;
+}
+
+@keyframes flash {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.flash {
+  animation: flash 1s linear infinite;
+}
