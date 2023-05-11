@@ -72,7 +72,8 @@ window.addEventListener("load", function () {
 
   // Function to update door message status
   function updateDoorMsg(doorNumber, status) {
-    document.getElementById(`door${doorNumber}Msg`).innerHTML = "<div class='smalltext'>Last Reported Turnaround</div>" + status;
+    document.getElementById(`door${doorNumber}Msg`).innerHTML =
+      "<div class='smalltext'>Last Reported Turnaround</div>" + status;
   }
 
   // Connect to Firebase Realtime Database
@@ -93,6 +94,49 @@ window.addEventListener("load", function () {
     doorMsgRef.on("value", (snapshot) => {
       const status = snapshot.val();
       updateDoorMsg(i, status);
+    });
+  }
+
+  // Get reference to the status message in the database
+  const statusMessageRef = database.ref("message/main");
+
+  // Listen for changes to the status message
+  statusMessageRef.on("value", (snapshot) => {
+    const message = snapshot.val();
+    const statusMessageElement = document.getElementById("status-message");
+
+    // Add the flashing class
+    statusMessageElement.classList.add("flash");
+
+    // Remove the flashing class after 5 seconds
+    setTimeout(() => {
+      statusMessageElement.classList.remove("flash");
+    }, 5000);
+
+    statusMessageElement.innerText = message;
+  });
+
+  // Add this inside your "window.addEventListener("load", function ()" block
+  // Fetch average turnaround time overall from Firebase
+  const averageTurnaroundTimeRef = database.ref(
+    "stats/AverageTurnaroundTimeOverall"
+  );
+  averageTurnaroundTimeRef.on("value", (snapshot) => {
+    const averageTurnaroundTime = snapshot.val();
+    document.getElementById("average-turnaround-time").textContent =
+      averageTurnaroundTime;
+  });
+
+  // Fetch individual door turnaround times from Firebase
+  for (let i = 1; i <= 16; i++) {
+    const doorAverageTurnaroundTimeRef = database.ref(
+      `stats/Door${i}AverageTurnaroundTime`
+    );
+    doorAverageTurnaroundTimeRef.on("value", (snapshot) => {
+      const doorAverageTurnaroundTime = snapshot.val();
+      document.getElementById(
+        `door${i}AverageTurnaroundTime`
+      ).textContent = `Door ${i}: ${doorAverageTurnaroundTime}`;
     });
   }
 });
