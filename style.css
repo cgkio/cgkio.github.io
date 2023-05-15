@@ -99,3 +99,30 @@
 .flash {
   animation: flash 1s linear infinite;
 }
+
+#callout-box {
+  position: absolute;  /* This will make the box float */
+  top: 650px;          /* Adjust these values for your specific X-Y position */
+  left: 50px;         /* Adjust these values for your specific X-Y position */
+  width: 300px;       /* Adjust this value for your preferred width */
+  padding: 20px;      /* Adjust this value for your preferred padding */
+  background-color: lightyellow; /* This will set the background to light yellow */
+  border: 1px solid black; /* Optional: This will set the border to black */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Optional: This will set a shadow around the box */
+  z-index: 100;       /* This ensures the box floats on top of other elements */
+}
+
+#status-message-container {
+  position: fixed;  /* This will make the box fixed */
+  top: 0;          /* This will position the box at the top of the screen */
+  left: 0;         /* This will position the box to the left of the screen */
+  width: 100%;     /* This will make the box span the entire width of the screen */
+  background-color: black; /* This will set the background to black */
+  color: white;    /* This will set the text color to white */
+  padding: 10px;   /* This gives some space around the text */
+  z-index: 200;    /* This ensures the box stays on top of other elements */
+}
+
+#status-message {
+  color: white;    /* This will set the text color to white */
+}
