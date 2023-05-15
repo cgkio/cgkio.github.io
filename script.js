@@ -1,21 +1,21 @@
 window.addEventListener("load", function () {
   const doorPositions = [
-    { x: 670, y: 650 }, // Door1
-    { x: 705, y: 650 }, // Door2
-    { x: 850, y: 650 }, // Door3
-    { x: 885, y: 650 }, // Door4
-    { x: 1060, y: 650 }, // Door5
-    { x: 1095, y: 650 }, // Door6
-    { x: 1235, y: 650 }, // Door7
-    { x: 1270, y: 650 }, // Door8
-    { x: 660, y: 743 }, // Door9
-    { x: 705, y: 743 }, // Door10
-    { x: 850, y: 743 }, // Door11
-    { x: 885, y: 743 }, // Door12
-    { x: 1050, y: 743 }, // Door13
-    { x: 1085, y: 743 }, // Door14
-    { x: 1235, y: 743 }, // Door15
-    { x: 1270, y: 743 }, // Door16
+    { x: 670, y: 530 }, // Door1
+    { x: 705, y: 530 }, // Door2
+    { x: 850, y: 530 }, // Door3
+    { x: 885, y: 530 }, // Door4
+    { x: 1060, y: 530 }, // Door5
+    { x: 1095, y: 530 }, // Door6
+    { x: 1235, y: 530 }, // Door7
+    { x: 1270, y: 530 }, // Door8
+    { x: 660, y: 673 }, // Door9
+    { x: 705, y: 673 }, // Door10
+    { x: 850, y: 673 }, // Door11
+    { x: 885, y: 673 }, // Door12
+    { x: 1050, y: 673 }, // Door13
+    { x: 1085, y: 673 }, // Door14
+    { x: 1235, y: 673 }, // Door15
+    { x: 1270, y: 673 }, // Door16
   ];
 
   // Initialize doors and set their positions
@@ -30,22 +30,22 @@ window.addEventListener("load", function () {
   });
 
   const doorMsgPositions = [
-    { x: 630, y: 563 }, // Door1
-    { x: 675, y: 563 }, // Door2
-    { x: 810, y: 563 }, // Door3
-    { x: 855, y: 563 }, // Door4
-    { x: 1020, y: 563 }, // Door5
-    { x: 1065, y: 563 }, // Door6
-    { x: 1195, y: 563 }, // Door7
-    { x: 1240, y: 563 }, // Door8
-    { x: 630, y: 835 }, // Door9
-    { x: 675, y: 835 }, // Door10
-    { x: 810, y: 835 }, // Door11
-    { x: 855, y: 835 }, // Door12
-    { x: 1010, y: 835 }, // Door13
-    { x: 1055, y: 835 }, // Door14
-    { x: 1195, y: 835 }, // Door15
-    { x: 1240, y: 835 }, // Door16
+    { x: 630, y: 443 }, // Door1
+    { x: 675, y: 443 }, // Door2
+    { x: 810, y: 443 }, // Door3
+    { x: 855, y: 443 }, // Door4
+    { x: 1020, y: 443 }, // Door5
+    { x: 1065, y: 443 }, // Door6
+    { x: 1195, y: 443 }, // Door7
+    { x: 1240, y: 443 }, // Door8
+    { x: 630, y: 755 }, // Door9
+    { x: 675, y: 755 }, // Door10
+    { x: 810, y: 755 }, // Door11
+    { x: 855, y: 755 }, // Door12
+    { x: 1010, y: 755 }, // Door13
+    { x: 1055, y: 755 }, // Door14
+    { x: 1195, y: 755 }, // Door15
+    { x: 1240, y: 755 }, // Door16
   ];
 
   // Initialize turnaround time messages and set their positions
@@ -96,6 +96,29 @@ window.addEventListener("load", function () {
       updateDoorMsg(i, status);
     });
   }
+
+  // Reference to the lastTransaction in Firebase Realtime Database
+const lastTransactionRef = database.ref("lastTransaction");
+
+// Listen for changes to the lastTransaction data
+lastTransactionRef.on("value", (snapshot) => {
+  const data = snapshot.val();
+
+  // Convert timestamps to readable format
+  const closeTimestamp = new Date(data.closeTimestamp).toLocaleString();
+  const firstPassengerTimestamp = new Date(data.firstPassengerTimestamp).toLocaleString();
+  const lastPassengerTimestamp = new Date(data.lastPassengerTimestamp).toLocaleString();
+  const openTimestamp = new Date(data.openTimestamp).toLocaleString();
+
+  // Set the data to HTML elements
+  document.getElementById("boarding-duration").textContent = data.boardingDuration.toFixed(2) + ' seconds';
+  document.getElementById("door-open-duration").textContent = data.doorOpenDuration.toFixed(2) + ' seconds';
+  document.getElementById("close-timestamp").textContent = closeTimestamp;
+  document.getElementById("first-passenger-timestamp").textContent = firstPassengerTimestamp;
+  document.getElementById("last-passenger-timestamp").textContent = lastPassengerTimestamp;
+  document.getElementById("open-timestamp").textContent = openTimestamp;
+  document.getElementById("people-count").textContent = data.peopleCount;
+});
 
   // Get reference to the status message in the database
   const statusMessageRef = database.ref("message/main");
