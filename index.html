@@ -1,31 +1,65 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<!--<title>Your Title</title> -->
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: lightgrey;
-        }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Landing Page</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom styles */
+    .graphic-box {
+      height: 100vh; /* 100% of the viewport height */
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
 
-        #headshot {
-            max-height: 100%;
-            width: auto;
-        }
+    /* Ensure the image covers the full height on desktops and tablets */
+    @media (min-width: 768px) {
+      .graphic-box {
+        width: 50vw; /* 50% of the viewport width */
+        height: 100vh; /* 100% of the viewport height */
+        float: left; /* Float them to get side by side */
+      }
+    }
 
-        @media only screen and (max-width: 600px) {
-            #headshot {
-                width: 100%;
-                height: auto;
-            }
-        }
-    </style>
+    /* On mobile devices, adjust the height to 50vh */
+    @media (max-width: 767px) {
+      .graphic-box {
+        width: 100%;
+        height: 50vh; /* 50% of the viewport height */
+      }
+    }
+
+    .graphic-link {
+      display: block;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; /* Hide the overflow on smaller screens */
+    }
+  </style>
 </head>
 <body>
-    <img id="headshot" src="headshot.jpg" alt="Christian Kessler">
+
+<div class="container-fluid p-0">
+  <div class="row no-gutters">
+    <div class="col-12 col-md-6">
+      <a href="https://portfolio.cgk.io/experiments" class="graphic-link">
+        <div class="graphic-box" style="background-image: url('experiments.png');"></div>
+      </a>
+    </div>
+    <div class="col-12 col-md-6">
+      <a href="https://portfolio.cgk.io/matrix" class="graphic-link">
+        <div class="graphic-box" style="background-image: url('portfolio.png');"></div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
