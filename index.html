@@ -1,65 +1,45 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Landing Page</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    /* Custom styles */
-    .graphic-box {
-      height: 100vh; /* 100% of the viewport height */
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-    }
-
-    /* Ensure the image covers the full height on desktops and tablets */
-    @media (min-width: 768px) {
-      .graphic-box {
-        width: 50vw; /* 50% of the viewport width */
-        height: 100vh; /* 100% of the viewport height */
-        float: left; /* Float them to get side by side */
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CGK.IO</title>
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
       }
-    }
-
-    /* On mobile devices, adjust the height to 50vh */
-    @media (max-width: 767px) {
-      .graphic-box {
-        width: 100%;
-        height: 50vh; /* 50% of the viewport height */
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        background-color: #181818; /* Solid grey background */
       }
-    }
-
-    .graphic-link {
-      display: block;
-      width: 100%;
-      height: 100%;
-      overflow: hidden; /* Hide the overflow on smaller screens */
-    }
-  </style>
-</head>
-<body>
-
-<div class="container-fluid p-0">
-  <div class="row no-gutters">
-    <div class="col-12 col-md-6">
-      <a href="https://portfolio.cgk.io/experiments" class="graphic-link">
-        <div class="graphic-box" style="background-image: url('experiments.png');"></div>
-      </a>
+      #logo {
+        max-width: 100%;
+        transition: all 2s ease-in-out;
+        transform: translateY(-100vh) rotate(0deg);
+      }
+      @media screen and (max-width: 600px) {
+        #logo {
+          width: 100%; /* Full width on mobile */
+        }
+      }
+    </style>
+    <script>
+      window.onload = function () {
+        const logo = document.getElementById("logo");
+        setTimeout(() => {
+          logo.style.transform = "translateY(0) rotate(360deg)";
+        }, 100);
+      };
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <img src="logo.png" alt="Logo" id="logo" />
     </div>
-    <div class="col-12 col-md-6">
-      <a href="https://portfolio.cgk.io/matrix" class="graphic-link">
-        <div class="graphic-box" style="background-image: url('portfolio.png');"></div>
-      </a>
-    </div>
-  </div>
-</div>
-
-<!-- Bootstrap JS, Popper.js, and jQuery -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+  </body>
 </html>
