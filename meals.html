@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <!-- Make it mobile-first -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Weekly Meal Planner</title>
+
+  <style>
+    /* Simple, responsive style for a one-page layout */
+    body {
+      font-family: sans-serif;
+      margin: 0; padding: 0;
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    header, section {
+      padding: 1em;
+      max-width: 600px; 
+      margin: auto;
+    }
+
+    header {
+      text-align: center;
+      background: #fff;
+      margin-bottom: 0.5em;
+      border-bottom: 1px solid #ddd;
+    }
+
+    h1 {
+      margin: 0.5em 0;
+      font-size: 1.5em;
+    }
+
+    .day-container {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1em;
+      background: #fff;
+      padding: 1em;
+      border-radius: 5px;
+    }
+
+    .day-label {
+      font-weight: bold;
+      margin-bottom: 0.5em;
+      font-size: 1.1em;
+    }
+
+    input[type="text"] {
+      font-size: 1em;
+      padding: 0.5em;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      width: 100%;
+    }
+
+    button {
+      width: 100%;
+      font-size: 1.2em;
+      padding: 0.8em;
+      background: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 1em;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    /* Confirmation banner at the top */
+    #confirmation-banner {
+      position: fixed;
+      top: -50px; /* hidden above the screen initially */
+      left: 0;
+      width: 100%;
+      background-color: #28a745;
+      color: white;
+      text-align: center;
+      padding: 1em;
+      font-size: 1em;
+      transition: top 0.5s;
+      z-index: 999;
+    }
+
+    /* Shown state for the banner */
+    #confirmation-banner.show {
+      top: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Confirmation banner -->
+  <div id="confirmation-banner">Meal plan updated successfully!</div>
+
+  <header>
+    <h1>Weekly Meal Planner</h1>
+    <p>Enter each day’s meal below and click Submit.</p>
+  </header>
+
+  <section id="meal-form">
+    <!-- The fields for each day (Sunday -> Saturday) will be generated dynamically -->
+  </section>
+
+  <section>
+    <button id="submitBtn">Submit</button>
+  </section>
+
+  <script>
+    // Days of the week in the desired order
+    const days = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+
+    // URL for your Firebase Realtime Database "meals" node (REST endpoint)
+    const firebaseUrl = "https://transformairports-default-rtdb.firebaseio.com/meals.json";
+
+    // DOM elements
+    const mealForm = document.getElementById('meal-form');
+    const submitBtn = document.getElementById('submitBtn');
+    const confirmationBanner = document.getElementById('confirmation-banner');
+
+    // In-memory object to store meals
+    let mealsData = {};
+
+    // Create form fields
+    function createFormFields(data) {
+      // Clear the form first
+      mealForm.innerHTML = "";
+
+      days.forEach(day => {
+        // Create container
+        const container = document.createElement('div');
+        container.className = 'day-container';
+
+        // Label
+        const label = document.createElement('div');
+        label.className = 'day-label';
+        label.textContent = capitalize(day);
+        container.appendChild(label);
+
+        // Input
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.value = data[day] ? data[day].meal : "";
+        input.id = day + "-meal";
+
+        container.appendChild(input);
+        mealForm.appendChild(container);
+      });
+    }
+
+    // Capitalize first letter, rest lowercase
+    function capitalize(str) {
+      return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
+    // Fetch existing data from Firebase
+    function fetchMeals() {
+      fetch(firebaseUrl)
+        .then(res => res.json())
+        .then(data => {
+          mealsData = data || {};
+          createFormFields(mealsData);
+        })
+        .catch(err => console.error("Error fetching data:", err));
+    }
+
+    // Submit (update) data in Firebase
+    function updateMeals() {
+      // Build an object with the new meal data
+      const updatedMeals = {};
+      days.forEach(day => {
+        const input = document.getElementById(day + "-meal");
+        updatedMeals[day] = { meal: input.value };
+      });
+
+      // Send PUT request to replace the meals node
+      fetch(firebaseUrl, {
+        method: 'PUT', // Overwrites the entire "meals" node
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updatedMeals)
+      })
+      .then(res => res.json())
+      .then(data => {
+        showConfirmation();
+      })
+      .catch(err => {
+        console.error("Error updating data:", err);
+      });
+    }
+
+    // Show a nice confirmation banner
+    function showConfirmation() {
+      // Slide the banner down
+      confirmationBanner.classList.add('show');
+
+      // After 3 seconds, slide it back up
+      setTimeout(() => {
+        confirmationBanner.classList.remove('show');
+      }, 3000);
+    }
+
+    // Event Listeners
+    submitBtn.addEventListener('click', updateMeals);
+
+    // On page load, fetch the current meals
+    fetchMeals();
+  </script>
+</body>
+</html>
